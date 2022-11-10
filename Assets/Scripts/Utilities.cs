@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class Utilities : MonoBehaviour
 {
     public Text peopleRandomTxt;
+    public GameObject GameUI;
+    public GameObject WinUI;
 
     public void RandomPeople()
     {
@@ -29,14 +31,19 @@ public class Utilities : MonoBehaviour
                 
                 if(search.text == peopleRandomTxt.text)
                 {
-                    Debug.Log("WIN");
-                    Application.Quit();
+                    GameUI.gameObject.SetActive(false);
+                    WinUI.gameObject.SetActive(true);
                 }
           
             }
         }
         
         search.text = "";
+    }
+
+    public void BackToMainMenu()
+    {
+        Application.LoadLevel("MAINMENU");
     }
     
 

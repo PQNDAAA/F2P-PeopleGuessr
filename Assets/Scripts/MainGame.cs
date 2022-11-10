@@ -7,9 +7,11 @@ public class MainGame : MonoBehaviour
 {
 
     public Utilities utils;
+    public GameObject WinUI;
 
     void Start()
     {
         utils.RandomPeople();
+        WinUI.SetActive(false);
     }
 }
