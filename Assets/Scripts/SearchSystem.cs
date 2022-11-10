@@ -7,6 +7,7 @@ public class SearchSystem : MonoBehaviour
 {
     public InputField searchField;
     public Text Answers;
+    public Utilities utils;
     void Start()
     {
     }
@@ -16,7 +17,6 @@ public class SearchSystem : MonoBehaviour
     }
     public void OnClickHandler()
     {
-        Utilities utils = new Utilities();
         utils.checkSearchField(searchField, Answers);
     }
 }

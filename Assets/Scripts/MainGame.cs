@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class MainGame : MonoBehaviour
 {
-    
+
+    public Utilities utils;
+
     void Start()
     {
-        Utilities utils = new Utilities();
         utils.RandomPeople();
     }
 }
