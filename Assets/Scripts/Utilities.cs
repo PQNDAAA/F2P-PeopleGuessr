@@ -55,7 +55,8 @@ public class Utilities : MonoBehaviour
 
     public void compareCorrectPerson(InputField search)
     {
-        var age = peopleRandomInfo["Age"];
+        var ageObject = peopleRandomInfo["Age"].ToString();
+        int age = Int32.Parse(ageObject);
 
         foreach (CreatePeoplesList people in PeoplesList.peoplelist)
         {
@@ -69,13 +70,20 @@ public class Utilities : MonoBehaviour
                 {
                     Debug.Log("The name " + search.text + " isn't correct");
                 }
-                if(peopleRandomInfo.ContainsValue(people.Age))
+
+                if (age > people.Age)
+                {
+                    Debug.Log(people.Age + " < " + age + " ++");
+                } 
+                else if (age < people.Age)    
+                {
+                    Debug.Log(people.Age + " > " + age + " --");
+                }
+                else
                 {
                     Debug.Log(people.Age + " == " + age);
-                } else
-                {
-                    Debug.Log(people.Age + " != " + age);
                 }
+
                 if (peopleRandomInfo.ContainsValue(people.Job))
                 {
                     Debug.Log("It's the correct job.");
