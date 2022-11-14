@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,18 +14,19 @@ public class Utilities : MonoBehaviour
 
     public void RandomPeople()
     {
-        CreatePeoplesList random = PeoplesList.peoplelist[UnityEngine.Random.Range(0, PeoplesList.peoplelist.Count)];
-        Debug.Log(random.Name);
+        MainStructure random = PeoplesList.peoplelist[UnityEngine.Random.Range(0, PeoplesList.peoplelist.Count)];
         peopleRandomTxt.text = random.Name;
+        peopleRandomTxt.gameObject.SetActive(false);
 
-        foreach (CreatePeoplesList people in PeoplesList.peoplelist)
+        foreach (MainStructure people in PeoplesList.peoplelist)
         {
             if (people.Name == peopleRandomTxt.text)
             {
                 peopleRandomInfo.Add("Name", people.Name);
                 peopleRandomInfo.Add("Job", people.Job);
                 peopleRandomInfo.Add("Age", people.Age);
-
+                peopleRandomInfo.Add("Size", people.Size);
+                peopleRandomInfo.Add("Nationality", people.Nationality);
             }
         }
      }
@@ -33,12 +35,11 @@ public class Utilities : MonoBehaviour
     {
         if(search.text != null && !answerslist.text.Contains(search.text))
         {
-            foreach(CreatePeoplesList people in PeoplesList.peoplelist)
+            foreach(MainStructure people in PeoplesList.peoplelist)
             {
                 if(people.Name == search.text)
                 {
-                    answerslist.text += people.Name + " " + people.Job + " " + people.Size + " " + people.Age + "\n";
-                    compareCorrectPerson(search);
+                    compareCorrectPerson(search, answerslist);
                 }
                 
                 if(search.text == peopleRandomTxt.text)
@@ -53,44 +54,70 @@ public class Utilities : MonoBehaviour
         search.text = "";
     }
 
-    public void compareCorrectPerson(InputField search)
+    public void compareCorrectPerson(InputField search, Text result)
     {
         var ageObject = peopleRandomInfo["Age"].ToString();
-        int age = Int32.Parse(ageObject);
+        var sizeObject = peopleRandomInfo["Size"].ToString();
 
-        foreach (CreatePeoplesList people in PeoplesList.peoplelist)
+        int age = Int32.Parse(ageObject);
+        float size = float.Parse(sizeObject);
+
+        foreach (MainStructure people in PeoplesList.peoplelist)
         {
             if (people.Name.Contains(search.text)) 
             {
                 if (peopleRandomInfo.ContainsValue(people.Name))
                 {
-                    Debug.Log("The name " + search.text + " is correct");
+                    result.text += search.text + " == ";
                 }
                 else
                 {
-                    Debug.Log("The name " + search.text + " isn't correct");
+                    result.text += search.text + " != ";
                 }
 
                 if (age > people.Age)
                 {
-                    Debug.Log(people.Age + " < " + age + " ++");
+                    result.text += people.Age + " ++ ";
                 } 
                 else if (age < people.Age)    
                 {
-                    Debug.Log(people.Age + " > " + age + " --");
+                    result.text += people.Age + " -- ";
                 }
                 else
                 {
-                    Debug.Log(people.Age + " == " + age);
+                    result.text += people.Age + " == ";
                 }
 
                 if (peopleRandomInfo.ContainsValue(people.Job))
                 {
-                    Debug.Log("It's the correct job.");
+                    result.text += people.Job + " == ";
                 }
                 else
                 {
-                    Debug.Log("It's not the correct job.");
+                    result.text += people.Job + " != ";
+                }
+                if (peopleRandomInfo.ContainsValue(people.Nationality))
+                {
+                    result.text += people.Nationality + " == ";
+                } 
+                else
+                {
+                    result.text += people.Nationality + " != ";
+                }
+                if (size > people.Size)
+                {
+                    result.text += people.Size + " ++ \n";
+                }
+                else if(size < people.Size) 
+                {
+                    result.text += people.Size + " -- \n";
+                }
+                else
+                {
+                    result.text += people.Size + " == \n";
+                }
+                {
+
                 }
             }
          

@@ -705,6 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   utils: {fileID: 854782243}
   WinUI: {fileID: 1209043784}
+  peoplelist: {fileID: 1775273897}
 --- !u!1 &776960515
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,7 +994,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1151512014}
   m_HandleRect: {fileID: 1151512013}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 1.0000001
   m_Size: 0.14631453
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1227,7 +1228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.044000003}
   m_AnchorMax: {x: 0.98333323, y: 0.4396019}
-  m_AnchoredPosition: {x: 19.396973, y: -17.872}
+  m_AnchoredPosition: {x: 19.396973, y: -17.871948}
   m_SizeDelta: {x: -347.4608, y: -35.745}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &999787586
@@ -2030,6 +2031,651 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612233181}
   m_CullTransparentMesh: 1
+--- !u!1 &1775273896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1775273898}
+  - component: {fileID: 1775273897}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1775273897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775273896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd09525909a6df44782163aaad979ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peoplel:
+    peoples:
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+    - Index: 0
+      Name: 
+      Job: 
+      Age: 0
+      Size: 0
+      Nationality: 
+--- !u!4 &1775273898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775273896}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 438.72348, y: 961.3808, z: -156.96614}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1910439724
 GameObject:
   m_ObjectHideFlags: 0
