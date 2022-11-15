@@ -898,6 +898,7 @@ MonoBehaviour:
   peopleRandomTxt: {fileID: 1082579904}
   GameUI: {fileID: 225096142}
   WinUI: {fileID: 1209043784}
+  peopleslist: {fileID: 1775273897}
 --- !u!4 &854782244
 Transform:
   m_ObjectHideFlags: 0
@@ -2060,6 +2061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd09525909a6df44782163aaad979ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JSONFile: {fileID: 4900000, guid: aaa0d4e78fbbb7741b64c9fd7e9e2ded, type: 3}
   peoplel:
     peoples:
     - Index: 0

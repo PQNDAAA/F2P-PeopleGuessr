@@ -4,24 +4,26 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
+using static MainStructure;
 
 public class Utilities : MonoBehaviour
 {
     public Text peopleRandomTxt;
     public GameObject GameUI;
     public GameObject WinUI;
+    public PeoplesList peopleslist;
     Dictionary<string, object> peopleRandomInfo = new Dictionary<string, object>();
 
     public void RandomPeople()
     {
-        MainStructure random = PeoplesList.peoplelist[UnityEngine.Random.Range(0, PeoplesList.peoplelist.Count)];
-        peopleRandomTxt.text = random.Name;
-        peopleRandomTxt.gameObject.SetActive(false);
+        var random = UnityEngine.Random.Range(0, peopleslist.peoplel.peoples.Count);
 
-        foreach (MainStructure people in PeoplesList.peoplelist)
+        foreach (MainStructure.People people in peopleslist.peoplel)
         {
-            if (people.Name == peopleRandomTxt.text)
+            if(people.Index == random)
             {
+                peopleRandomTxt.text = people.Name;
+
                 peopleRandomInfo.Add("Name", people.Name);
                 peopleRandomInfo.Add("Job", people.Job);
                 peopleRandomInfo.Add("Age", people.Age);
@@ -29,13 +31,14 @@ public class Utilities : MonoBehaviour
                 peopleRandomInfo.Add("Nationality", people.Nationality);
             }
         }
+        peopleRandomTxt.gameObject.SetActive(true);
      }
 
     public void checkSearchField(InputField search, Text answerslist)
     {
         if(search.text != null && !answerslist.text.Contains(search.text))
         {
-            foreach(MainStructure people in PeoplesList.peoplelist)
+            foreach (MainStructure.People people in peopleslist.peoplel)
             {
                 if(people.Name == search.text)
                 {
@@ -62,7 +65,7 @@ public class Utilities : MonoBehaviour
         int age = Int32.Parse(ageObject);
         float size = float.Parse(sizeObject);
 
-        foreach (MainStructure people in PeoplesList.peoplelist)
+        foreach (MainStructure.People people in peopleslist.peoplel)
         {
             if (people.Name.Contains(search.text)) 
             {
