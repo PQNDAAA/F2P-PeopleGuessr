@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 using static MainStructure;
+using Image = UnityEngine.UI.Image;
 
 public class Utilities : MonoBehaviour
 {
@@ -12,27 +15,57 @@ public class Utilities : MonoBehaviour
     public GameObject GameUI;
     public GameObject WinUI;
     public PeoplesList peopleslist;
+
+    public Text suspects;
+    public Image imgsuspects;
+
+    private Sprite img1;
+
     Dictionary<string, object> peopleRandomInfo = new Dictionary<string, object>();
 
     public void RandomPeople()
     {
-        var random = UnityEngine.Random.Range(0, peopleslist.peoplel.peoples.Count);
-
-        foreach (MainStructure.People people in peopleslist.peoplel)
+        int random = 0;
+        for(int i = 0; i < 4; i++)
         {
-            if(people.Index == random)
-            {
-                peopleRandomTxt.text = people.Name;
+           random = UnityEngine.Random.Range(0, peopleslist.peoplel.peoples.Count);
 
-                peopleRandomInfo.Add("Name", people.Name);
-                peopleRandomInfo.Add("Job", people.Job);
-                peopleRandomInfo.Add("Age", people.Age);
-                peopleRandomInfo.Add("Size", people.Size);
-                peopleRandomInfo.Add("Nationality", people.Nationality);
+            foreach (MainStructure.People people in peopleslist.peoplel)
+            {
+                if (people.Index == random && !suspects.text.Contains(people.Name))
+                {
+                    suspects.text += " " + people.Name;
+
+                    Debug.Log(people.img);
+
+                    GameObject MyImage = new GameObject();
+                    MyImage.AddComponent(typeof(Image));
+                    img1 = Resources.Load<Sprite>(people.img);
+                    MyImage.GetComponent<Image>().sprite = img1;
+                    Debug.Log("Test script started");
+
+                }
             }
+
         }
-        peopleRandomTxt.gameObject.SetActive(true);
-     }
+
+        /*/
+                foreach (MainStructure.People people in peopleslist.peoplel)
+                {
+                    if(people.Index == random)
+                    {
+                        peopleRandomTxt.text = people.Name;
+
+                        peopleRandomInfo.Add("Name", people.Name);
+                        peopleRandomInfo.Add("Job", people.Job);
+                        peopleRandomInfo.Add("Age", people.Age);
+                        peopleRandomInfo.Add("Size", people.Size);
+                        peopleRandomInfo.Add("Nationality", people.Nationality);
+                    }
+                }
+                peopleRandomTxt.gameObject.SetActive(true);
+        /*/
+    }
 
     public void checkSearchField(InputField search, Text answerslist)
     {

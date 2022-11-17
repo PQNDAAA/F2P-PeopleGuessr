@@ -7,6 +7,7 @@ public class MainGame : MonoBehaviour
 {
     public Utilities utils;
     public GameObject WinUI;
+    public GameObject GameUI;
     public PeoplesList peoplelist;
     public TextAsset JSONFile;
 
@@ -16,6 +17,8 @@ public class MainGame : MonoBehaviour
 
         utils.RandomPeople();
         WinUI.SetActive(false);
+        GameUI.SetActive(false);
+
 
         //var outputString = JsonUtility.ToJson(peoplelist.peoplel);
         //File.WriteAllText("C:\\Program Files\\Peopleslist.json", outputString);
