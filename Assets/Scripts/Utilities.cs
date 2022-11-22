@@ -7,7 +7,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using static MainStructure;
-using Image = UnityEngine.UI.Image;
 
 public class Utilities : MonoBehaviour
 {
@@ -21,10 +20,14 @@ public class Utilities : MonoBehaviour
 
     private Sprite img1;
 
-    Dictionary<string, object> peopleRandomInfo = new Dictionary<string, object>();
+    public GameObject[] preImage;
 
+    public GameObject canvas;
+
+    Dictionary<string, object> peopleRandomInfo = new Dictionary<string, object>();
     public void RandomPeople()
     {
+        
         int random = 0;
         for(int i = 0; i < 4; i++)
         {
@@ -36,13 +39,14 @@ public class Utilities : MonoBehaviour
                 {
                     suspects.text += " " + people.Name;
 
-                    Debug.Log(people.img);
-
-                    GameObject MyImage = new GameObject();
-                    MyImage.AddComponent(typeof(Image));
-                    img1 = Resources.Load<Sprite>(people.img);
-                    MyImage.GetComponent<Image>().sprite = img1;
-                    Debug.Log("Test script started");
+                    for (int j = 0; j < preImage.Length; j++)
+                    {
+                        if (people.Name == preImage[j].gameObject.tag)
+                        {
+                            Instantiate(preImage[j], new Vector3(canvas.transform.position.x + 100, canvas.transform.position.y, canvas.transform.position.z),
+                                canvas.transform.rotation, canvas.transform);
+                        }
+                    }
 
                 }
             }

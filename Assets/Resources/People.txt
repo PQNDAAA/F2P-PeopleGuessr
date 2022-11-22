@@ -3,7 +3,6 @@
         {
             "Index": "0",
             "Name": "Jean",
-            "img": "Assets/Resources/JeanIMG.jpg",
             "Job": "d",
             "Age": 19,
             "Size":1.23,
@@ -12,7 +11,6 @@
         {
             "Index": "1",
             "Name": "Daniel",
-            "img": "Assets/Resources/DanielIMG.jpg",
             "Job": "d",
             "Age": 19,
             "Size":1.23,
@@ -21,7 +19,6 @@
         {
             "Index": "2",
             "Name": "Theodore",
-            "img": "Assets/Resources/TheodoreIMG.jpg",
             "Job": "d",
             "Age": 19,
             "Size":1.23,
@@ -30,7 +27,6 @@
         {
             "Index": "3",
             "Name": "Anthony",
-            "img": "https://cdn.pixabay.com/photo/2012/08/27/14/19/mountains-55067_960_720.png",
             "Job": "d",
             "Age": 19,
             "Size":1.23,
@@ -39,7 +35,6 @@
         {
             "Index": "4",
             "Name": "Jesus",
-            "img": "Assets/Resources/JesusIMG.jpg",
             "Job": "ete",
             "Age": 1,
             "Size":1.80,

@@ -11,7 +11,6 @@ public class MainStructure : MonoBehaviour
     {
         public int Index;
         public string Name;
-        public string img;
         public string Job;
         public int Age;
         public float Size;
