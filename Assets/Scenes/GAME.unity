@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752d6bef8481e2540ab1346deefdaf12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagePre: []
+  imagePre: {fileID: 0}
 --- !u!1 &445057718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,6 +1141,7 @@ MonoBehaviour:
   - {fileID: 4284312600722742862, guid: 89de8d6c690f97a48b115c40765b3dc3, type: 3}
   - {fileID: 9180463375515696398, guid: b7fd06b0b0300064db96e827b5c3a408, type: 3}
   - {fileID: 2446256566403964373, guid: 9078c36207821bd4d89f5bf1d78ed71c, type: 3}
+  canvas: {fileID: 1087917070}
 --- !u!4 &854782244
 Transform:
   m_ObjectHideFlags: 0
@@ -1700,7 +1701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752d6bef8481e2540ab1346deefdaf12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagePre: []
+  imagePre: {fileID: 2446256566403964373, guid: 9078c36207821bd4d89f5bf1d78ed71c, type: 3}
 --- !u!1 &1120622669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,7 +3279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752d6bef8481e2540ab1346deefdaf12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagePre: []
+  imagePre: {fileID: 0}
 --- !u!224 &1792913232
 RectTransform:
   m_ObjectHideFlags: 0
