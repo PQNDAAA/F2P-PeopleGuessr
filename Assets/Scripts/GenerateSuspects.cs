@@ -7,10 +7,13 @@ public class GenerateSuspects : MonoBehaviour
 {
     //------------------
     public GameObject[] preImage;
+    public Transform[] gizmos;
+
     //------------------
     public Text suspects;
     public PeoplesList peopleslist;
 
+    //------------------
     public void Generate()
     {
         int random = 0;
@@ -23,13 +26,26 @@ public class GenerateSuspects : MonoBehaviour
                 if (people.Index == random && !suspects.text.Contains(people.Name))
                 {
                     suspects.text += " " + people.Name;
+
                     for (int j = 0; j < preImage.Length; j++)
                     {
                         if (people.Name == preImage[j].gameObject.tag)
                         {
-                            Instantiate(preImage[j], new Vector3(transform.position.x + 100,
-                                transform.position.y, transform.position.z),
-                                transform.rotation, transform);
+                            Debug.Log(Screen.currentResolution);
+
+                            float x, y, z;
+
+                            x = Random.Range(gizmos[2].position.x, gizmos[3].position.x);
+                            y = Random.Range(gizmos[0].position.y, gizmos[1].position.y);
+                            z = 0;
+
+
+                            Vector3 randomPosition = new Vector3(x,y,z);
+                            Debug.Log(randomPosition);
+                            Instantiate(preImage[j], randomPosition,
+                                Quaternion.identity,transform);
+
+                            
                         }
                     }
                 }
