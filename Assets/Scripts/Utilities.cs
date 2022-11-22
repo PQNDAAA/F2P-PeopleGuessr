@@ -13,63 +13,9 @@ public class Utilities : MonoBehaviour
     public Text peopleRandomTxt;
     public GameObject GameUI;
     public GameObject WinUI;
-    public PeoplesList peopleslist;
-
-    public Text suspects;
-    public Image imgsuspects;
-
-    private Sprite img1;
-
-    public GameObject[] preImage;
-
-    public GameObject canvas;
+    public PeoplesList peopleslist; 
 
     Dictionary<string, object> peopleRandomInfo = new Dictionary<string, object>();
-    public void RandomPeople()
-    {
-        
-        int random = 0;
-        for(int i = 0; i < 4; i++)
-        {
-           random = UnityEngine.Random.Range(0, peopleslist.peoplel.peoples.Count);
-
-            foreach (MainStructure.People people in peopleslist.peoplel)
-            {
-                if (people.Index == random && !suspects.text.Contains(people.Name))
-                {
-                    suspects.text += " " + people.Name;
-
-                    for (int j = 0; j < preImage.Length; j++)
-                    {
-                        if (people.Name == preImage[j].gameObject.tag)
-                        {
-                            Instantiate(preImage[j], new Vector3(canvas.transform.position.x + 100, canvas.transform.position.y, canvas.transform.position.z),
-                                canvas.transform.rotation, canvas.transform);
-                        }
-                    }
-
-                }
-            }
-
-        }
-
-        /*/
-                foreach (MainStructure.People people in peopleslist.peoplel)
-                {
-                    if(people.Index == random)
-                    {
-                        peopleRandomTxt.text = people.Name;
-
-                        peopleRandomInfo.Add("Name", people.Name);
-                        peopleRandomInfo.Add("Job", people.Job);
-                        peopleRandomInfo.Add("Age", people.Age);
-                        peopleRandomInfo.Add("Size", people.Size);
-                        peopleRandomInfo.Add("Nationality", people.Nationality);
-                    }
-                }
-                peopleRandomTxt.gameObject.SetActive(true);
-        /*/
-    }
 
     public void checkSearchField(InputField search, Text answerslist)
     {
@@ -81,16 +27,13 @@ public class Utilities : MonoBehaviour
                 {
                     compareCorrectPerson(search, answerslist);
                 }
-                
                 if(search.text == peopleRandomTxt.text)
                 {
                     GameUI.gameObject.SetActive(false);
                     WinUI.gameObject.SetActive(true);
                 }
-          
             }
         }
-        
         search.text = "";
     }
 
@@ -164,7 +107,6 @@ public class Utilities : MonoBehaviour
 
         }
     }
-
     public void BackToMainMenu()
     {
         Application.LoadLevel("MAINMENU");

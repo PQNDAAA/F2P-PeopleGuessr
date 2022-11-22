@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MainGame : MonoBehaviour
 {
-    public Utilities utils;
+    public GenerateSuspects generateSuspects;
     public GameObject WinUI;
     public GameObject GameUI;
     public PeoplesList peoplelist;
@@ -15,7 +15,8 @@ public class MainGame : MonoBehaviour
     {
         peoplelist.peoplel = JsonUtility.FromJson <PeoplesList.CreatePeopleList>(JSONFile.text);
 
-        utils.RandomPeople();
+        generateSuspects.Generate();
+
         WinUI.SetActive(false);
         GameUI.SetActive(false);
 
