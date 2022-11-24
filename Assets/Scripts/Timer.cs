@@ -10,6 +10,8 @@ public class Timer : MonoBehaviour
 
     public bool TimerIsRunning = false;
 
+    public bool questionsTime = false;
+
     Text timerTxt;
 
     void Start()
