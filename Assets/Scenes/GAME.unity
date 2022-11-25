@@ -2027,64 +2027,74 @@ MonoBehaviour:
     peoples:
     - Index: 0
       Name: 
-      Job: 
-      Age: 0
-      Size: 0
-      Nationality: 
+      Hair: 
+      Tatoos: 0
+      Tshirt: 
+      Glasses: 0
+      Backpack: 0
     - Index: 0
       Name: 
-      Job: 
-      Age: 0
-      Size: 0
-      Nationality: 
+      Hair: 
+      Tatoos: 0
+      Tshirt: 
+      Glasses: 0
+      Backpack: 0
     - Index: 0
       Name: 
-      Job: 
-      Age: 0
-      Size: 0
-      Nationality: 
+      Hair: 
+      Tatoos: 0
+      Tshirt: 
+      Glasses: 0
+      Backpack: 0
     - Index: 0
       Name: 
-      Job: 
-      Age: 0
-      Size: 0
-      Nationality: 
+      Hair: 
+      Tatoos: 0
+      Tshirt: 
+      Glasses: 0
+      Backpack: 0
     - Index: 0
       Name: 
-      Job: 
-      Age: 0
-      Size: 0
-      Nationality: 
+      Hair: 
+      Tatoos: 0
+      Tshirt: 
+      Glasses: 0
+      Backpack: 0
     - Index: 0
       Name: 
-      Job: 
-      Age: 0
-      Size: 0
-      Nationality: 
+      Hair: 
+      Tatoos: 0
+      Tshirt: 
+      Glasses: 0
+      Backpack: 0
     - Index: 0
       Name: 
-      Job: 
-      Age: 0
-      Size: 0
-      Nationality: 
+      Hair: 
+      Tatoos: 0
+      Tshirt: 
+      Glasses: 0
+      Backpack: 0
     - Index: 0
       Name: 
-      Job: 
-      Age: 0
-      Size: 0
-      Nationality: 
+      Hair: 
+      Tatoos: 0
+      Tshirt: 
+      Glasses: 0
+      Backpack: 0
     - Index: 0
       Name: 
-      Job: 
-      Age: 0
-      Size: 0
-      Nationality: 
+      Hair: 
+      Tatoos: 0
+      Tshirt: 
+      Glasses: 0
+      Backpack: 0
     - Index: 0
       Name: 
-      Job: 
-      Age: 0
-      Size: 0
-      Nationality: 
+      Hair: 
+      Tatoos: 0
+      Tshirt: 
+      Glasses: 0
+      Backpack: 0
 --- !u!4 &1775273898
 Transform:
   m_ObjectHideFlags: 0

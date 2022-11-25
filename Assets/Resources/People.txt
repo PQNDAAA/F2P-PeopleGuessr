@@ -2,43 +2,75 @@
     "peoples":[
         {
             "Index": "0",
-            "Name": "Jean",
-            "Job": "d",
-            "Age": 19,
-            "Size":1.23,
-            "Nationality":"AZA"
+            "Name": "Max",
+            "Hair": "Brown",
+            "Tatoos": false,
+            "Tshirt": "Red",
+            "Glasses": true,
+            "Backpack": true
         },
         {
             "Index": "1",
-            "Name": "Daniel",
-            "Job": "d",
-            "Age": 19,
-            "Size":1.23,
-            "Nationality":"AZA"
+            "Name": "Peter",
+            "Hair": "Brown",
+            "Tatoos": true,
+            "Tshirt": "Red",
+            "Glasses": true,
+            "Backpack": false
         },
         {
             "Index": "2",
-            "Name": "Theodore",
-            "Job": "d",
-            "Age": 19,
-            "Size":1.23,
-            "Nationality":"AZA"
+            "Name": "Eric",
+            "Hair": "Brown",
+            "Tatoos": true,
+            "Tshirt": "Green",
+            "Glasses": false,
+            "Backpack": false
         },
         {
             "Index": "3",
-            "Name": "Anthony",
-            "Job": "d",
-            "Age": 19,
-            "Size":1.23,
-            "Nationality":"AZA"
+            "Name": "Nolan",
+            "Hair": "Blond",
+            "Tatoos": false,
+            "Tshirt": "Green",
+            "Glasses": true,
+            "Backpack": true
         },
         {
             "Index": "4",
-            "Name": "Jesus",
-            "Job": "ete",
-            "Age": 1,
-            "Size":1.80,
-            "Nationality":"Portugueuse"
+            "Name": "Emile",
+            "Hair": "Blond",
+            "Tatoos": true,
+            "Tshirt": "Blue",
+            "Glasses": true,
+            "Backpack": true
+          },
+        {
+            "Index": "5",
+            "Name": "William",
+            "Hair": "Blond",
+            "Tatoos": false,
+            "Tshirt": "Blue",
+            "Glasses": false,
+            "Backpack": true
+        },
+        {
+            "Index": "6",
+            "Name": "Marc",
+            "Hair": "Red",
+            "Tatoos": true,
+            "Tshirt": "Green",
+            "Glasses": true,
+            "Backpack": true
+        },
+        {
+            "Index": "7",
+            "Name": "Terrence",
+            "Hair": "Red",
+            "Tatoos": true,
+            "Tshirt": "Blue",
+            "Glasses": false,
+            "Backpack": false
         }
     ]
 }

@@ -27,7 +27,6 @@ public class GenerateSuspects : MonoBehaviour
                     if (people.Index == random && !suspectslist.ContainsKey(random))
                     {
                     suspectslist.Add(people.Index, people.Name);
-                    peopleslist.peoplel.peoples.Remove(people);
 
                         for (int j = 0; j < preImage.Length; j++)
                         {
@@ -45,7 +44,9 @@ public class GenerateSuspects : MonoBehaviour
                             Debug.Log(randomPosition);
                             Instantiate(preImage[j], randomPosition,
                                 Quaternion.identity, transform);
-                            }
+
+                            peopleslist.peoplel.peoples.Remove(people);
+                        }
                         }
                 } 
             }
