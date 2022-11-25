@@ -18,7 +18,7 @@ public class GenerateSuspects : MonoBehaviour
     public void Generate()
     {
         int random = 0;
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
         {
                 random = UnityEngine.Random.Range(0, peopleslist.peoplel.peoples.Count);
 
@@ -32,7 +32,6 @@ public class GenerateSuspects : MonoBehaviour
                         {
                             if (people.Name == preImage[j].gameObject.tag)
                             {
-
                             float x, y, z;
 
                             x = Random.Range(gizmos[2].position.x, gizmos[3].position.x);
@@ -57,6 +56,11 @@ public class GenerateSuspects : MonoBehaviour
     {
         System.Random random = new System.Random();
         int index = random.Next(suspectslist.Count);
+
+        foreach(var s in suspectslist)
+        {
+            Debug.Log("Suspects :" + s);
+        }
 
         KeyValuePair<int, string> pair = suspectslist.ElementAt(index);
 
