@@ -10,6 +10,15 @@ public class QuestionsMenu : MonoBehaviour
     public Toggle noBox;
 
     public GameObject go;
+    
+    void Update()
+    {
+        if (go.activeSelf)
+        {
+            noBox.interactable = true;
+            yesBox.interactable = true;
+        }
+    }
 
     public void ActionConfirm()
     {

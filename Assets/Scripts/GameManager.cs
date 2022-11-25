@@ -22,17 +22,19 @@ public class GameManager : MonoBehaviour
     public Timer timer;
 
     delegate void actiondelegate();
-
     actiondelegate mydelegate;
+
+    [Header("Executions Number")]
+    public int nbExecutions;
 
     void Start()
     {
-
         //JSON File
         peoplelist.peoplel = JsonUtility.FromJson<PeoplesList.CreatePeopleList>(jsonFile.text);
 
         //Generation
         generateSuspects.Generate();
+        generateSuspects.TrueSuspect();
 
         //UI
         winUI.SetActive(false);
@@ -42,11 +44,15 @@ public class GameManager : MonoBehaviour
     {
         if (timer.TimerIsRunning == false && timer.questionsTime == false)
         {
-            mydelegate = checkTimer;
-            mydelegate.Invoke();
-            timer.questionsTime = true;
-
-            
+            if(nbExecutions != 3)
+            {
+                mydelegate = questionsTime;
+                mydelegate.Invoke();
+            } 
+            else
+            {
+                Debug.Log("The game is finished");
+            }
         }
         if (timer.questionsTime == true && !questionsUI.activeSelf)
         {
@@ -56,8 +62,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void checkTimer()
+    private void questionsTime()
     {
             questionsUI.SetActive(true);
+            timer.questionsTime = true;
+            addExecutions();
+    }
+
+    private int addExecutions()
+    {
+        return nbExecutions += 1;
     }
 }
