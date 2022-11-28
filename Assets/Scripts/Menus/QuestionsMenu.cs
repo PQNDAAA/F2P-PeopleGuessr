@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +10,12 @@ public class QuestionsMenu : MonoBehaviour
     public Toggle yesBox;
     public Toggle noBox;
 
+    [Header("Text")]
+    public Text questions;
+
+    [Header("GameObject")]
     public GameObject go;
+    public QuestionsList qL;
     
     void Update()
     {
@@ -49,6 +55,17 @@ public class QuestionsMenu : MonoBehaviour
         if (noBox.isOn)
         {
             yesBox.isOn = false;
+        }
+    }
+    public void RandomQuestion()
+    {
+        foreach(QuestionsStructure questionsList in qL.questionsList)
+        {
+            System.Random random = new System.Random();
+            int index = random.Next(questionsList.question.Length);
+
+            questions.text = questionsList.question[index].ToString();
+            Debug.Log(questionsList.question[index]);
         }
     }
 }

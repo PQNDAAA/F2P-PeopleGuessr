@@ -2,18 +2,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static PeoplesList;
 
 public class GameManager : MonoBehaviour
 {
     [Header("JSON File")]
     public TextAsset jsonFile;
+    public TextAsset questionsFile;
 
     [Header("Lists")]
     public PeoplesList peoplelist;
+    public QuestionsList questionslist;
 
     [Header("UI")]
     public GameObject winUI;
     public GameObject questionsUI;
+    //a refaire
+    public QuestionsMenu qm;
 
     [Header("Generation")]
     public GenerateSuspects generateSuspects;
@@ -27,10 +32,13 @@ public class GameManager : MonoBehaviour
     [Header("Executions Number")]
     public int nbExecutions;
 
+   
+
     void Start()
     {
         //JSON File
         peoplelist.peoplel = JsonUtility.FromJson<PeoplesList.CreatePeopleList>(jsonFile.text);
+        questionslist.questionsList = JsonUtility.FromJson<QuestionsList.IQuestionsList>(questionsFile.text);
 
         //Generation
         generateSuspects.Generate();
@@ -66,6 +74,7 @@ public class GameManager : MonoBehaviour
     {
             questionsUI.SetActive(true);
             timer.questionsTime = true;
+        qm.RandomQuestion();
             addExecutions();
     }
 
