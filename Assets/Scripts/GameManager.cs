@@ -32,8 +32,6 @@ public class GameManager : MonoBehaviour
     [Header("Executions Number")]
     public int nbExecutions;
 
-   
-
     void Start()
     {
         //JSON File
@@ -72,10 +70,10 @@ public class GameManager : MonoBehaviour
 
     private void questionsTime()
     {
-            questionsUI.SetActive(true);
-            timer.questionsTime = true;
+        questionsUI.SetActive(true);
+        timer.questionsTime = true;
         qm.RandomQuestion();
-            addExecutions();
+        addExecutions();
     }
 
     private int addExecutions()

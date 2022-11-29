@@ -59,13 +59,16 @@ public class QuestionsMenu : MonoBehaviour
     }
     public void RandomQuestion()
     {
-        foreach(QuestionsStructure questionsList in qL.questionsList)
-        {
-            System.Random random = new System.Random();
-            int index = random.Next(questionsList.question.Length);
+        System.Random random = new System.Random();
+        int index = random.Next(qL.questionsList.questions.Count);
 
-            questions.text = questionsList.question[index].ToString();
-            Debug.Log(questionsList.question[index]);
+        foreach (QuestionsStructure questionsList in qL.questionsList)
+        {
+            if(questionsList.index == index)
+            {
+                questions.text = questionsList.question.ToString();
+                Debug.Log(questionsList.question);
+            } 
         }
     }
 }

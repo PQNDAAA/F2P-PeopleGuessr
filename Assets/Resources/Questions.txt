@@ -1,42 +1,52 @@
 {
     "questions":[
         {
+            "index": 0,
             "question": "Red Hair?",
             "answer": false
         },
         {
+            "index": 1,
             "question": "Green Hair?",
             "answer": true
         },
         {
+            "index": 2,
             "question": "Brown Hair?",
             "answer": true
         },
         {
+            "index": 3,
             "question": "Blond Hair?",
             "answer": true
         },
         {
+            "index": 4,
             "question": "Tatoos?",
             "answer": true
         },
         {
+            "index": 5,
             "question": "Red tshirt?",
             "answer": true
         },
         {
+            "index": 6,
             "question": "Green tshirt?",
             "answer": true
         },
         {
+            "index": 7,
             "question": "Blue Tshirt?",
             "answer": true
         },
         {
+            "index": 8,
             "question": "Glasses?",
             "answer": true
         },
         {
+            "index": 9,
             "question": "Backpack?",
             "answer": true
         }
