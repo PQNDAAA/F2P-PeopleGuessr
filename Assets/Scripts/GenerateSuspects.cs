@@ -15,6 +15,7 @@ public class GenerateSuspects : MonoBehaviour
 
     //------------------
     public Dictionary<int, string> suspectslist = new Dictionary<int, string>();
+    public Dictionary<int, string> truesuspect = new Dictionary<int, string>();   
     public void Generate()
     {
         int random = 0;
@@ -22,7 +23,7 @@ public class GenerateSuspects : MonoBehaviour
         {
                 random = UnityEngine.Random.Range(0, peopleslist.peoplel.peoples.Count);
 
-                foreach (MainStructure.People people in peopleslist.peoplel.ToList())
+                foreach (MainStructure people in peopleslist.peoplel.ToList())
                 {
                     if (people.Index == random && !suspectslist.ContainsKey(random))
                     {
@@ -44,7 +45,7 @@ public class GenerateSuspects : MonoBehaviour
                             Instantiate(preImage[j], randomPosition,
                                 Quaternion.identity, transform);
 
-                            peopleslist.peoplel.peoples.Remove(people);
+                           // peopleslist.peoplel.peoples.Remove(people);
                         }
                         }
                 } 
@@ -63,6 +64,8 @@ public class GenerateSuspects : MonoBehaviour
         }
 
         KeyValuePair<int, string> pair = suspectslist.ElementAt(index);
+
+        truesuspect.Add(pair.Key, pair.Value);
 
         Debug.Log(pair.Value);
     }

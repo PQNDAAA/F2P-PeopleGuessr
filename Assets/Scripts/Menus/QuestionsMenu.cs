@@ -16,6 +16,10 @@ public class QuestionsMenu : MonoBehaviour
     [Header("GameObject")]
     public GameObject go;
     public QuestionsList qL;
+    public GenerateSuspects gs;
+    public PeoplesList peopleslist;
+
+    int indexQ;
     
     void Update()
     {
@@ -28,14 +32,7 @@ public class QuestionsMenu : MonoBehaviour
 
     public void ActionConfirm()
     {
-        if (yesBox.isOn)
-        {
-            yesBox.isOn = false;
-        }
-        if (noBox.isOn)
-        {
-            noBox.isOn = false;
-        }
+        checkAnswer();
 
         noBox.interactable = false;
         yesBox.interactable = false;
@@ -57,7 +54,7 @@ public class QuestionsMenu : MonoBehaviour
             yesBox.isOn = false;
         }
     }
-    public void RandomQuestion()
+    public int RandomQuestion()
     {
         System.Random random = new System.Random();
         int index = random.Next(qL.questionsList.questions.Count);
@@ -69,6 +66,46 @@ public class QuestionsMenu : MonoBehaviour
                 questions.text = questionsList.question.ToString();
                 Debug.Log(questionsList.question);
             } 
+        }
+        return indexQ+= index;
+    }
+
+    public void checkAnswer()
+    {
+
+        if (yesBox.isOn)
+        {
+            yesBox.isOn = false;
+
+            foreach (QuestionsStructure questionsList in qL.questionsList)
+            {
+                if (questionsList.index == indexQ)
+                {
+                    Debug.Log(questionsList.question);
+                }
+            }
+        }
+        if (noBox.isOn)
+        {
+            noBox.isOn = false;
+
+            foreach (QuestionsStructure questionsList in qL.questionsList)
+            {
+                if (questionsList.index == indexQ)
+                {
+                    foreach(MainStructure people in peopleslist.peoplel.ToList())
+                    {
+                        foreach(var s in gs.truesuspect)
+                        {
+                            if(people.Name == s.Value)
+                            {
+                               
+                            }
+                        }
+                    }
+                    Debug.Log(questionsList.answer);
+                }
+            }
         }
     }
 }

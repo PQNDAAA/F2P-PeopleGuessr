@@ -4,11 +4,9 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
 
-public class MainStructure : MonoBehaviour
-{
-    [System.Serializable]
-    public class People
-    {
+[System.Serializable]
+public struct MainStructure
+{ 
         public int Index;
         public string Name;
         public string Hair;
@@ -16,6 +14,4 @@ public class MainStructure : MonoBehaviour
         public string Tshirt;
         public bool Glasses;
         public bool Backpack;
-    }
-
 }

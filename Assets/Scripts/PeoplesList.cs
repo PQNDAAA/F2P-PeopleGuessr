@@ -8,11 +8,11 @@ public class PeoplesList : MonoBehaviour
 
     [System.Serializable]
 
-    public class CreatePeopleList : IEnumerable<MainStructure.People>
+    public class CreatePeopleList : IEnumerable<MainStructure>
     {
-        public List<MainStructure.People> peoples;
+        public List<MainStructure> peoples;
 
-        public IEnumerator<MainStructure.People> GetEnumerator()
+        public IEnumerator<MainStructure> GetEnumerator()
         {
             return peoples.GetEnumerator();
         }
