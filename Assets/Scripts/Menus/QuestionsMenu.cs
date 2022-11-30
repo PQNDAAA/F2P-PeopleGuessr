@@ -67,45 +67,80 @@ public class QuestionsMenu : MonoBehaviour
                 Debug.Log(questionsList.question);
             } 
         }
-        return indexQ+= index;
+        return indexQ = index;
     }
 
     public void checkAnswer()
     {
-
-        if (yesBox.isOn)
-        {
-            yesBox.isOn = false;
-
             foreach (QuestionsStructure questionsList in qL.questionsList)
             {
                 if (questionsList.index == indexQ)
                 {
-                    Debug.Log(questionsList.question);
-                }
-            }
-        }
-        if (noBox.isOn)
-        {
-            noBox.isOn = false;
-
-            foreach (QuestionsStructure questionsList in qL.questionsList)
-            {
-                if (questionsList.index == indexQ)
-                {
-                    foreach(MainStructure people in peopleslist.peoplel.ToList())
-                    {
-                        foreach(var s in gs.truesuspect)
+                    foreach(var people in peopleslist.peoplel)
+                    { 
+                        foreach (var s in gs.truesuspect)
                         {
                             if(people.Name == s.Value)
                             {
-                               
+                                foreach(var suspectc in gs.suspectCharacteristics)
+                                {
+                                    //Debug.Log(questionsList.answer);
+                                    if(suspectc.Key == questionsList.answer.ToString())
+                                    {
+                                        if (noBox.isOn)
+                                        {
+                                            noBox.isOn = false;
+
+                                            if (suspectc.Value == "False")
+                                            {
+                                                Debug.Log("Your answer is OK");
+                                            }
+                                            else if (suspectc.Value == "True")
+                                            {
+                                                Debug.Log("No, you're wrong");
+                                            } 
+                                            else if(questionsList.color.ToString() != "Nothing")
+                                            {
+                                                if (suspectc.Value != questionsList.color.ToString())
+                                                {
+                                                Debug.Log("Your answer is OK");
+                                            } 
+                                                else
+                                                {
+                                                Debug.Log("No, you're wrong");
+                                            }
+                                            }
+
+                                        } else if (yesBox.isOn)
+                                        {
+                                            yesBox.isOn = false;
+
+                                            if (suspectc.Value == "False")
+                                            {
+                                            Debug.Log("No, you're wrong");
+                                        }
+                                            else if (suspectc.Value == "True")
+                                            {
+                                            Debug.Log("Your answer is OK");
+                                        }
+                                            if (questionsList.color.ToString() != "Nothing")
+                                            {
+                                                if (suspectc.Value != questionsList.color.ToString())
+                                                {
+                                                Debug.Log("No, you're wrong");
+                                            }
+                                                else
+                                                {
+                                                Debug.Log("Your answer is OK");
+                                            }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
-                    Debug.Log(questionsList.answer);
                 }
             }
-        }
     }
 }

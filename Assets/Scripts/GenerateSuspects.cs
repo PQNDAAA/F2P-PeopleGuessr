@@ -15,7 +15,8 @@ public class GenerateSuspects : MonoBehaviour
 
     //------------------
     public Dictionary<int, string> suspectslist = new Dictionary<int, string>();
-    public Dictionary<int, string> truesuspect = new Dictionary<int, string>();   
+    public Dictionary<int, string> truesuspect = new Dictionary<int, string>(); 
+    public Dictionary <string, string> suspectCharacteristics = new Dictionary<string, string>();
     public void Generate()
     {
         int random = 0;
@@ -58,15 +59,26 @@ public class GenerateSuspects : MonoBehaviour
         System.Random random = new System.Random();
         int index = random.Next(suspectslist.Count);
 
-        foreach(var s in suspectslist)
+        KeyValuePair<int, string> pair = suspectslist.ElementAt(index);
+
+        foreach (var s in suspectslist)
         {
             Debug.Log("Suspects :" + s);
         }
 
-        KeyValuePair<int, string> pair = suspectslist.ElementAt(index);
-
         truesuspect.Add(pair.Key, pair.Value);
 
+        foreach(MainStructure truesuspect in peopleslist.peoplel)
+        {
+            if (truesuspect.Name == pair.Value)
+            {
+                suspectCharacteristics.Add("Hair", truesuspect.Hair);
+                suspectCharacteristics.Add("Tatoos", truesuspect.Tatoos.ToString());
+                suspectCharacteristics.Add("Tshirt", truesuspect.Tshirt);
+                suspectCharacteristics.Add("Glasses", truesuspect.Glasses.ToString());
+                suspectCharacteristics.Add("Backpack", truesuspect.Backpack.ToString());
+            }
+        }
         Debug.Log(pair.Value);
     }
    

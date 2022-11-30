@@ -3,52 +3,62 @@
         {
             "index": 0,
             "question": "Red Hair?",
-            "answer": 0
+            "answer": 1,
+            "color": 4
         },
         {
             "index": 1,
             "question": "Green Hair?",
-            "answer": 1
+            "answer": 1,
+            "color": 3
         },
         {
             "index": 2,
             "question": "Brown Hair?",
-            "answer": 2
+            "answer": 1,
+            "color": 2
         },
         {
             "index": 3,
             "question": "Blond Hair?",
-            "answer": 3
+            "answer": 1,
+            "color": 1
         },
         {
             "index": 4,
             "question": "Tatoos?",
-            "answer": 3
+            "answer": 4,
+            "color": 5
         },
         {
             "index": 5,
             "question": "Red tshirt?",
-            "answer": 0
+            "answer": 2,
+            "color": 4
         },
         {
             "index": 6,
             "question": "Green tshirt?",
-            "answer": 1
+            "answer": 2,
+            "color": 3
         },
         {
             "index": 7,
             "question": "Blue Tshirt?",
-            "answer": 4
+            "answer": 2,
+            "color": 0
         },
         {
             "index": 8,
             "question": "Glasses?",
-            "answer": 3
+            "answer": 0,
+            "color": 5
         },
         {
             "index": 9,
             "question": "Backpack?",
-            "answer": 3
+            "answer": 3,
+            "color": 5
         }
     ]
 }
