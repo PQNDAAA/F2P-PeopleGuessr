@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +10,7 @@ public class QuestionsMenu : MonoBehaviour
 
     [Header("Text")]
     public Text questions;
+    public Text answer;
 
     [Header("GameObject")]
     public GameObject go;
@@ -37,9 +36,14 @@ public class QuestionsMenu : MonoBehaviour
         noBox.interactable = false;
         yesBox.interactable = false;
 
+        StartCoroutine(Countdown());
+    }
+    public IEnumerator Countdown()
+    {
+        yield return new WaitForSeconds(4);
+
         go.SetActive(false);
     }
-
     public void YesIsOn()
     {
         if (yesBox.isOn)
@@ -72,75 +76,52 @@ public class QuestionsMenu : MonoBehaviour
 
     public void checkAnswer()
     {
-            foreach (QuestionsStructure questionsList in qL.questionsList)
-            {
-                if (questionsList.index == indexQ)
-                {
-                    foreach(var people in peopleslist.peoplel)
-                    { 
-                        foreach (var s in gs.truesuspect)
-                        {
-                            if(people.Name == s.Value)
-                            {
-                                foreach(var suspectc in gs.suspectCharacteristics)
-                                {
-                                    //Debug.Log(questionsList.answer);
-                                    if(suspectc.Key == questionsList.answer.ToString())
-                                    {
                                         if (noBox.isOn)
                                         {
                                             noBox.isOn = false;
 
-                                            if (suspectc.Value == "False")
-                                            {
-                                                Debug.Log("Your answer is OK");
-                                            }
-                                            else if (suspectc.Value == "True")
-                                            {
-                                                Debug.Log("No, you're wrong");
-                                            } 
-                                            else if(questionsList.color.ToString() != "Nothing")
-                                            {
-                                                if (suspectc.Value != questionsList.color.ToString())
-                                                {
-                                                Debug.Log("Your answer is OK");
-                                            } 
-                                                else
-                                                {
-                                                Debug.Log("No, you're wrong");
-                                            }
-                                            }
+            MessageAnswer("No you're wrong", "Your answer is OK");
 
                                         } else if (yesBox.isOn)
                                         {
                                             yesBox.isOn = false;
 
-                                            if (suspectc.Value == "False")
-                                            {
-                                            Debug.Log("No, you're wrong");
-                                        }
-                                            else if (suspectc.Value == "True")
-                                            {
-                                            Debug.Log("Your answer is OK");
-                                        }
-                                            if (questionsList.color.ToString() != "Nothing")
-                                            {
-                                                if (suspectc.Value != questionsList.color.ToString())
-                                                {
-                                                Debug.Log("No, you're wrong");
-                                            }
-                                                else
-                                                {
-                                                Debug.Log("Your answer is OK");
-                                            }
-                                            }
-                                        }
+            MessageAnswer("Your answer is OK", "No you're wrong");
+        }
                                     }
-                                }
+
+    public void MessageAnswer(string yesString, string NoString)
+    {
+        foreach (QuestionsStructure questionsList in qL.questionsList)//QUESTIONS
+        {
+            if (questionsList.index == indexQ)
+            {
+                foreach (var suspectc in gs.suspectCharacteristics)//Suspect Chracteristics
+                {
+                    if (suspectc.Key == questionsList.answer.ToString())
+                    {
+                        if (suspectc.Value == "False")
+                        {
+                            answer.text = NoString;
+                        }
+                        else if (suspectc.Value == "True")
+                        {
+                            answer.text = yesString;
+                        }
+                        else if (questionsList.color.ToString() != "Nothing")
+                        {
+                            if (suspectc.Value != questionsList.color.ToString())
+                            {
+                                answer.text = NoString;
+                            }
+                            else
+                            {
+                                answer.text = yesString;
                             }
                         }
                     }
                 }
             }
+        }
     }
 }

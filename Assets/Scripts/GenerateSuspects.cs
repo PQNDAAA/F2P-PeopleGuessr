@@ -44,11 +44,9 @@ public class GenerateSuspects : MonoBehaviour
                             Vector3 randomPosition = new Vector3(x, y, z);
                             Debug.Log(randomPosition);
                             Instantiate(preImage[j], randomPosition,
-                                Quaternion.identity, transform);
-
-                           // peopleslist.peoplel.peoples.Remove(people);
+                            Quaternion.identity, transform);
                         }
-                        }
+                    }
                 } 
             }
         }
@@ -60,11 +58,6 @@ public class GenerateSuspects : MonoBehaviour
         int index = random.Next(suspectslist.Count);
 
         KeyValuePair<int, string> pair = suspectslist.ElementAt(index);
-
-        foreach (var s in suspectslist)
-        {
-            Debug.Log("Suspects :" + s);
-        }
 
         truesuspect.Add(pair.Key, pair.Value);
 
