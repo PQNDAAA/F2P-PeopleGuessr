@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +7,6 @@ public class Timer : MonoBehaviour
     public float seconds = 0;
 
     public bool TimerIsRunning = false;
-
     public bool questionsTime = false;
 
     Text timerTxt;

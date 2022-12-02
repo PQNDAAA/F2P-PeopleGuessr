@@ -18,6 +18,10 @@ public class QuestionsMenu : MonoBehaviour
     public GenerateSuspects gs;
     public PeoplesList peopleslist;
 
+    [Header("Executions Number")]
+    public int nbExecutionsPanel;
+    public int maxExecutionsPanel = 3;
+
     int indexQ;
     
     void Update()
@@ -36,13 +40,14 @@ public class QuestionsMenu : MonoBehaviour
         noBox.interactable = false;
         yesBox.interactable = false;
 
-        StartCoroutine(Countdown());
+        StartCoroutine(PanelCountdown());
     }
-    public IEnumerator Countdown()
+    public IEnumerator PanelCountdown()
     {
         yield return new WaitForSeconds(4);
 
         go.SetActive(false);
+        answer.text = "";
     }
     public void YesIsOn()
     {

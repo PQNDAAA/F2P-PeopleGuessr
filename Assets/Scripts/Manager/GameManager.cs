@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static PeoplesList;
-
 public class GameManager : MonoBehaviour
 {
     [Header("JSON File")]
@@ -17,6 +12,7 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     public GameObject winUI;
     public GameObject questionsUI;
+    public GameObject finalUI;
     //a refaire
     public QuestionsMenu qm;
 
@@ -29,35 +25,33 @@ public class GameManager : MonoBehaviour
     delegate void actiondelegate();
     actiondelegate mydelegate;
 
-    [Header("Executions Number")]
-    public int nbExecutions;
-
     void Start()
     {
         //JSON File
         peoplelist.peoplel = JsonUtility.FromJson<PeoplesList.CreatePeopleList>(jsonFile.text);
         questionslist.questionsList = JsonUtility.FromJson<QuestionsList.IQuestionsList>(questionsFile.text);
 
-        //Generation
-        generateSuspects.Generate();
-        generateSuspects.TrueSuspect();
+        mydelegate = PlayTime;
+        mydelegate.Invoke();
 
         //UI
         winUI.SetActive(false);
+        finalUI.SetActive(false);
         questionsUI.SetActive(false);
     }
     void Update()
     {
         if (timer.TimerIsRunning == false && timer.questionsTime == false)
         {
-            if(nbExecutions != 3)
+            if(qm.nbExecutionsPanel != qm.maxExecutionsPanel)
             {
-                mydelegate = questionsTime;
+                mydelegate = QuestionsTime;
                 mydelegate.Invoke();
             } 
             else
             {
-                Debug.Log("The game is finished");
+                mydelegate = FinalTime;
+                mydelegate.Invoke();
             }
         }
         if (timer.questionsTime == true && !questionsUI.activeSelf)
@@ -68,16 +62,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void questionsTime()
+    private void QuestionsTime()
     {
         questionsUI.SetActive(true);
         timer.questionsTime = true;
         qm.RandomQuestion();
-        addExecutions();
+        AddExecutions();
     }
-
-    private int addExecutions()
+    private void FinalTime()
     {
-        return nbExecutions += 1;
+        finalUI.SetActive(true);   
+    }
+    private void PlayTime()
+    {
+        generateSuspects.Generate();
+        generateSuspects.TrueSuspect();
+    }
+    private int AddExecutions()
+    {
+        return qm.nbExecutionsPanel += 1;
     }
 }
