@@ -1329,10 +1329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d346a783de44324bad5453902dee4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  peopleRandomTxt: {fileID: 0}
-  GameUI: {fileID: 0}
-  WinUI: {fileID: 1209043784}
-  peopleslist: {fileID: 1775273897}
 --- !u!4 &854782244
 Transform:
   m_ObjectHideFlags: 0
@@ -1845,7 +1841,7 @@ MonoBehaviour:
   gs: {fileID: 1087917074}
   peopleslist: {fileID: 1775273897}
   nbExecutionsPanel: 0
-  maxExecutionsPanel: 1
+  maxExecutionsPanel: 3
 --- !u!1 &1180290115
 GameObject:
   m_ObjectHideFlags: 0
