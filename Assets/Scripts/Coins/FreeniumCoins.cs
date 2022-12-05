@@ -9,6 +9,11 @@ public class FreeniumCoins : CoinsManager
         return coinsFreenium+= value;
     }
 
+    public override string DisplayCoins()
+    {
+        return coinsFreenium.ToString();
+    }
+
     public override int RemoveCoins(int value)
     {
         return coinsFreenium-= value;

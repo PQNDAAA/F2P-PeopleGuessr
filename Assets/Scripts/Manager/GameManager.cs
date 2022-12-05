@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
         }
         if(utils.finalmenu.state == true)
         {
+            PopupCoins();
             coinsManager.AddCoins(100);
             coinsManager.UpdateCoins();
             utils.finalmenu.state = false;
@@ -83,7 +84,8 @@ public class GameManager : MonoBehaviour
     }
     private void FinalTime()
     {
-        finalUI.SetActive(true);   
+        utils.finalmenu.popupCoins.gameObject.SetActive(false);
+        finalUI.SetActive(true);
     }
     private void PlayTime()
     {
@@ -93,5 +95,11 @@ public class GameManager : MonoBehaviour
     private int AddExecutions()
     {
         return qm.nbExecutionsPanel += 1;
+    }
+    public void PopupCoins()
+    {
+        utils.finalmenu.popupCoins.gameObject.SetActive(true);
+        utils.finalmenu.popupCoins.text = "+ " + coinsManager.DisplayCoins() + " Coins";
+        StartCoroutine(utils.Countdown(3));
     }
 }

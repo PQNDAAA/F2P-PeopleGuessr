@@ -9,6 +9,11 @@ public class PreniumCoins : CoinsManager
         return coinsPrenium += value;
     }
 
+    public override string DisplayCoins()
+    {
+        return coinsPrenium.ToString();
+    }
+
     public override int RemoveCoins(int value)
     {
         return coinsPrenium -= value;

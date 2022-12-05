@@ -13,8 +13,9 @@ public class FinalMenu : MonoBehaviour
 
     [Header("Text")]
     public Text answer;
+    public Text popupCoins;
 
-    public bool state = false;  
+    public bool state = false;
 
     public void ActionConfirm()
     {
@@ -48,5 +49,4 @@ public class FinalMenu : MonoBehaviour
             }
         }
     }
-
 }
