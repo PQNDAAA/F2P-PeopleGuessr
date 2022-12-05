@@ -14,6 +14,8 @@ public class FinalMenu : MonoBehaviour
     [Header("Text")]
     public Text answer;
 
+    public bool state = false;  
+
     public void ActionConfirm()
     {
         checkAnswer();
@@ -37,10 +39,12 @@ public class FinalMenu : MonoBehaviour
             if(field.text == nameSuspect.Value)
             {
                 answer.text = "Congratulations!!";
+                state = true;
             } 
             else
             {
                 answer.text = "You're wrong, it was " + nameSuspect.Value;
+                state = false;
             }
         }
     }

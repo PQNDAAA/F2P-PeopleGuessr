@@ -8,12 +8,11 @@ public class CoinsText : MonoBehaviour
     public UtilitiesMainMenu utils;
     void Start()
     {
-        text = GetComponent<Text>();
-        
+        text = GetComponent<Text>();   
     }
 
     void Update()
     {
-        text.text = utils.coinsManager.coins.ToString();
+      text.text = utils.coinsManager.coins.ToString();
     }
 }

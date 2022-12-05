@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Diagnostics;
+
 public class GameManager : MonoBehaviour
 {
     [Header("JSON File")]
@@ -15,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject finalUI;
     //a refaire
     public QuestionsMenu qm;
+    public Utilities utils;
 
     [Header("Generation")]
     public GenerateSuspects generateSuspects;
@@ -58,7 +61,14 @@ public class GameManager : MonoBehaviour
         {
             timer.questionsTime = false;
             timer.TimerIsRunning = true;
-            timer.seconds = 20;
+            timer.seconds = 10;
+        }
+        if(utils.finalmenu.state == true)
+        {
+            utils.CoinsManager.AddCoins(100);
+            utils.CoinsManager.UpdateCoins();
+            Debug.Log("100 coins added");
+            utils.finalmenu.state = false;
         }
     }
 

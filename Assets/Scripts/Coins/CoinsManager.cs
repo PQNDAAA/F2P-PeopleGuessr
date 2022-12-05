@@ -9,6 +9,7 @@ public class CoinsManager : MonoBehaviour
     public int coins = 0;
     void Start()
     {
+        //PlayerPrefs.SetInt(Coins, coins);
         coins = PlayerPrefs.GetInt("Coins");
     }
 
@@ -21,10 +22,10 @@ public class CoinsManager : MonoBehaviour
     }
     public int AddCoins(int value)
     {
-        return coins + value;
+        return coins += value;
     }
     public int RemoveCoins(int value)
     {
-        return coins - value;
+        return coins -= value;
     }
 }
