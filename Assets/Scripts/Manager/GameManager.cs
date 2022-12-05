@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject finalUI;
     //a refaire
     public QuestionsMenu qm;
+    public CoinsManager coinsManager;
     public Utilities utils;
 
     [Header("Generation")]
@@ -33,6 +34,8 @@ public class GameManager : MonoBehaviour
         //JSON File
         peoplelist.peoplel = JsonUtility.FromJson<PeoplesList.CreatePeopleList>(jsonFile.text);
         questionslist.questionsList = JsonUtility.FromJson<QuestionsList.IQuestionsList>(questionsFile.text);
+
+        coinsManager = GetComponent<CoinsManager>();    
 
         mydelegate = PlayTime;
         mydelegate.Invoke();
@@ -65,9 +68,8 @@ public class GameManager : MonoBehaviour
         }
         if(utils.finalmenu.state == true)
         {
-            utils.CoinsManager.AddCoins(100);
-            utils.CoinsManager.UpdateCoins();
-            Debug.Log("100 coins added");
+            coinsManager.AddCoins(100);
+            coinsManager.UpdateCoins();
             utils.finalmenu.state = false;
         }
     }

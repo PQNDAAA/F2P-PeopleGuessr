@@ -13,6 +13,6 @@ public class CoinsText : MonoBehaviour
 
     void Update()
     {
-      text.text = utils.coinsManager.coins.ToString();
+      //text.text = utils.coinsManager.coins.ToString();
     }
 }
