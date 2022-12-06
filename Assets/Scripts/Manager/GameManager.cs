@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
         winUI.SetActive(false);
         finalUI.SetActive(false);
         questionsUI.SetActive(false);
+
+        utils.popupCoinsText.gameObject.SetActive(false);
     }
     void Update()
     {
@@ -77,7 +79,6 @@ public class GameManager : MonoBehaviour
     private void FinalTime()
     {
         finalUI.SetActive(true);
-        utils.popupCoinsText.gameObject.SetActive(false);
     }
     private void PlayTime()
     {
