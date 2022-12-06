@@ -15,16 +15,10 @@ public class GameManager : MonoBehaviour
     public GameObject winUI;
     public GameObject questionsUI;
     public GameObject finalUI;
-    //a refaire
-    public QuestionsMenu qm;
-    public CoinsManager coinsManager;
     public Utilities utils;
 
     [Header("Generation")]
     public GenerateSuspects generateSuspects;
-
-    [Header("Timer")]
-    public Timer timer;
 
     delegate void actiondelegate();
     actiondelegate mydelegate;
@@ -33,9 +27,7 @@ public class GameManager : MonoBehaviour
     {
         //JSON File
         peoplelist.peoplel = JsonUtility.FromJson<PeoplesList.CreatePeopleList>(jsonFile.text);
-        questionslist.questionsList = JsonUtility.FromJson<QuestionsList.IQuestionsList>(questionsFile.text);
-
-        coinsManager = GetComponent<CoinsManager>();    
+        questionslist.questionsList = JsonUtility.FromJson<QuestionsList.IQuestionsList>(questionsFile.text); 
 
         mydelegate = PlayTime;
         mydelegate.Invoke();
@@ -47,9 +39,9 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        if (timer.TimerIsRunning == false && timer.questionsTime == false)
+        if (utils.timer.TimerIsRunning == false && utils.timer.questionsTime == false)
         {
-            if(qm.nbExecutionsPanel != qm.maxExecutionsPanel)
+            if(utils.qm.nbExecutionsPanel != utils.qm.maxExecutionsPanel)
             {
                 mydelegate = QuestionsTime;
                 mydelegate.Invoke();
@@ -60,49 +52,36 @@ public class GameManager : MonoBehaviour
                 mydelegate.Invoke();
             }
         }
-        if (timer.questionsTime && !questionsUI.activeSelf)
-        {
-            timer.questionsTime = false;
-            timer.TimerIsRunning = true;
-            timer.seconds = 10;
-        }
-        if (utils.finalmenu.addCoins)
-            {
-                coinsManager.AddCoins(100);
-                coinsManager.UpdateCoins();
-                utils.finalmenu.addCoins = false;
-            }
-         if (utils.finalmenu.popupCoinsState)
-            {
-                PopupCoins();
-            }
-    }
 
+        if (utils.timer.questionsTime && !questionsUI.activeSelf)
+        {
+            utils.timer.questionsTime = false;
+            utils.timer.TimerIsRunning = true;
+            utils.timer.seconds = 10;
+        }
+
+        if (utils.finalmenu.isWin)
+        {
+            utils.AddCoins(100);
+            utils.PopupCoins(100,3); 
+            utils.finalmenu.isWin = false;
+        }
+    }
     private void QuestionsTime()
     {
         questionsUI.SetActive(true);
-        timer.questionsTime = true;
-        qm.RandomQuestion();
-        AddExecutions();
+        utils.timer.questionsTime = true;
+        utils.qm.RandomQuestion();
+        utils.AddExecutions();
     }
     private void FinalTime()
     {
-        utils.finalmenu.popupCoins.gameObject.SetActive(false);
         finalUI.SetActive(true);
+        utils.popupCoinsText.gameObject.SetActive(false);
     }
     private void PlayTime()
     {
         generateSuspects.Generate();
         generateSuspects.TrueSuspect();
-    }
-    private int AddExecutions()
-    {
-        return qm.nbExecutionsPanel += 1;
-    }
-    public void PopupCoins()
-    {
-        utils.finalmenu.popupCoins.gameObject.SetActive(true);
-        utils.finalmenu.popupCoins.text = "+100 Coins";
-        StartCoroutine(utils.CountdownPopupCoins(3));
     }
 }
