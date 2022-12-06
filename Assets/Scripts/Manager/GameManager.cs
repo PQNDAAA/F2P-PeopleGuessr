@@ -66,22 +66,16 @@ public class GameManager : MonoBehaviour
             timer.TimerIsRunning = true;
             timer.seconds = 10;
         }
-
-        if(utils.finalmenu.isWin)
-        {
-            utils.finalmenu.addCoins = true;
-            utils.finalmenu.popupCoinsState = true;   
-        } 
-        else if (utils.finalmenu.addCoins)
-        {
-            coinsManager.AddCoins(100);
-            coinsManager.UpdateCoins();
-            utils.finalmenu.addCoins = false;
-        } 
-        else if (utils.finalmenu.popupCoinsState)
-        {
-            PopupCoins();
-        }
+        if (utils.finalmenu.addCoins)
+            {
+                coinsManager.AddCoins(100);
+                coinsManager.UpdateCoins();
+                utils.finalmenu.addCoins = false;
+            }
+         if (utils.finalmenu.popupCoinsState)
+            {
+                PopupCoins();
+            }
     }
 
     private void QuestionsTime()
@@ -93,6 +87,7 @@ public class GameManager : MonoBehaviour
     }
     private void FinalTime()
     {
+        utils.finalmenu.popupCoins.gameObject.SetActive(false);
         finalUI.SetActive(true);
     }
     private void PlayTime()
@@ -107,7 +102,7 @@ public class GameManager : MonoBehaviour
     public void PopupCoins()
     {
         utils.finalmenu.popupCoins.gameObject.SetActive(true);
-        utils.finalmenu.popupCoins.text = "+ " + coinsManager.DisplayCoins() + " Coins";
+        utils.finalmenu.popupCoins.text = "+100 Coins";
         StartCoroutine(utils.CountdownPopupCoins(3));
     }
 }

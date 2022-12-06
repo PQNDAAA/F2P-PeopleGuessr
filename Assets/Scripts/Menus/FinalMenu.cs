@@ -19,7 +19,6 @@ public class FinalMenu : MonoBehaviour
 
     public bool popupCoinsState = false;
     public bool addCoins = false;
-    public bool isWin = false;
 
     public void ActionConfirm()
     {
@@ -44,12 +43,14 @@ public class FinalMenu : MonoBehaviour
             if(field.text == nameSuspect.Value)
             {
                 answer.text = "Congratulations!!";
-                isWin = true;
+                addCoins = true;
+                popupCoinsState = true;
             } 
             else
             {
                 answer.text = "You're wrong, it was " + nameSuspect.Value;
-                isWin = false;
+                addCoins = false;
+                popupCoinsState = false;
             }
         }
     }
