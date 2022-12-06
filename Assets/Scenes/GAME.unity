@@ -996,7 +996,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 85b99004c77953949b66693fbefe2550, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2c7e39e07b721e41a8416100e735ab0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1330,6 +1330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CoinsManager: {fileID: 0}
+  gameManager: {fileID: 991628753}
   finalmenu: {fileID: 1264262239}
 --- !u!4 &854782244
 Transform:
@@ -2301,8 +2302,12 @@ MonoBehaviour:
   field: {fileID: 1234923393}
   gs: {fileID: 1087917074}
   go: {fileID: 1264262235}
+  utils: {fileID: 0}
   answer: {fileID: 1759876475}
-  state: 0
+  popupCoins: {fileID: 0}
+  popupCoinsState: 0
+  addCoins: 0
+  isWin: 0
 --- !u!1 &1409045016
 GameObject:
   m_ObjectHideFlags: 0

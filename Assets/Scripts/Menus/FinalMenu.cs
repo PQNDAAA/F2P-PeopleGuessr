@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Diagnostics;
 using UnityEngine.UI;
 
 public class FinalMenu : MonoBehaviour
@@ -10,12 +11,15 @@ public class FinalMenu : MonoBehaviour
     [Header("GameObject")]
     public GenerateSuspects gs;
     public GameObject go;
+    public Utilities utils;
 
     [Header("Text")]
     public Text answer;
     public Text popupCoins;
 
-    public bool state = false;
+    public bool popupCoinsState = false;
+    public bool addCoins = false;
+    public bool isWin = false;
 
     public void ActionConfirm()
     {
@@ -40,12 +44,12 @@ public class FinalMenu : MonoBehaviour
             if(field.text == nameSuspect.Value)
             {
                 answer.text = "Congratulations!!";
-                state = true;
+                isWin = true;
             } 
             else
             {
                 answer.text = "You're wrong, it was " + nameSuspect.Value;
-                state = false;
+                isWin = false;
             }
         }
     }

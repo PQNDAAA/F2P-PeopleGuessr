@@ -60,18 +60,27 @@ public class GameManager : MonoBehaviour
                 mydelegate.Invoke();
             }
         }
-        if (timer.questionsTime == true && !questionsUI.activeSelf)
+        if (timer.questionsTime && !questionsUI.activeSelf)
         {
             timer.questionsTime = false;
             timer.TimerIsRunning = true;
             timer.seconds = 10;
         }
-        if(utils.finalmenu.state == true)
+
+        if(utils.finalmenu.isWin)
         {
-            PopupCoins();
+            utils.finalmenu.addCoins = true;
+            utils.finalmenu.popupCoinsState = true;   
+        } 
+        else if (utils.finalmenu.addCoins)
+        {
             coinsManager.AddCoins(100);
             coinsManager.UpdateCoins();
-            utils.finalmenu.state = false;
+            utils.finalmenu.addCoins = false;
+        } 
+        else if (utils.finalmenu.popupCoinsState)
+        {
+            PopupCoins();
         }
     }
 
@@ -84,7 +93,6 @@ public class GameManager : MonoBehaviour
     }
     private void FinalTime()
     {
-        utils.finalmenu.popupCoins.gameObject.SetActive(false);
         finalUI.SetActive(true);
     }
     private void PlayTime()
@@ -100,6 +108,6 @@ public class GameManager : MonoBehaviour
     {
         utils.finalmenu.popupCoins.gameObject.SetActive(true);
         utils.finalmenu.popupCoins.text = "+ " + coinsManager.DisplayCoins() + " Coins";
-        StartCoroutine(utils.Countdown(3));
+        StartCoroutine(utils.CountdownPopupCoins(3));
     }
 }

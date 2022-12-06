@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class Utilities : MonoBehaviour
 {
-    public CoinsManager CoinsManager;
+    public GameManager gameManager;
     public FinalMenu finalmenu;
 
-    public IEnumerator Countdown(int value)
+    public IEnumerator CountdownPopupCoins (int value)
     {
         yield return new WaitForSeconds(value);
+
+        finalmenu.popupCoinsState = false;
     }
 
 }
