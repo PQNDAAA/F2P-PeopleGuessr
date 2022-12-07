@@ -2,61 +2,61 @@
     "questions":[
         {
             "index": 0,
-            "question": "Red Hair?",
+            "question": "Do you think the suspect has Red Hair?",
             "answer": 1,
             "color": 4
         },
         {
             "index": 1,
-            "question": "Green Hair?",
+            "question": "Do you think the suspect has Green Hair?",
             "answer": 1,
             "color": 3
         },
         {
             "index": 2,
-            "question": "Brown Hair?",
+            "question": "Do you think the suspect has Brown Hair?",
             "answer": 1,
             "color": 2
         },
         {
             "index": 3,
-            "question": "Blond Hair?",
+            "question": "Do you think the suspect has Blond Hair?",
             "answer": 1,
             "color": 1
         },
         {
             "index": 4,
-            "question": "Tatoos?",
+            "question": "Do you think the suspect has Tatoos?",
             "answer": 4,
             "color": 5
         },
         {
             "index": 5,
-            "question": "Red tshirt?",
+            "question": "Do you think the suspect has Red Tshirt?",
             "answer": 2,
             "color": 4
         },
         {
             "index": 6,
-            "question": "Green tshirt?",
+            "question": "Do you think the suspect has Green Tshirt?",
             "answer": 2,
             "color": 3
         },
         {
             "index": 7,
-            "question": "Blue Tshirt?",
+            "question": "Do you think the suspect has Blue Tshirt?",
             "answer": 2,
             "color": 0
         },
         {
             "index": 8,
-            "question": "Glasses?",
+            "question": "Do you think the suspect has Glasses?",
             "answer": 0,
             "color": 5
         },
         {
             "index": 9,
-            "question": "Backpack?",
+            "question": "Do you think the suspect has Backpack?",
             "answer": 3,
             "color": 5
         }
