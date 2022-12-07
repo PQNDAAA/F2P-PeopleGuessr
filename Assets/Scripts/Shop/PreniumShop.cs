@@ -6,26 +6,26 @@ using UnityEngine.UI;
 
 public class PreniumShop : MonoBehaviour
 {
-    public enum numberOfCoins { price1 = 100, price2 = 200, price3 = 300, price4 = 400, 
-        price5 = 500, price6 = 600, price7 = 700 }
-    public numberOfCoins nb;
+    public enum numberOfCoins { _100 = 100, _200 = 200, _300 = 300, _400 = 400, 
+        _500 = 500, _600 = 600, _700 = 700, _800 = 800, _900 = 900, _1000= 1000}
+    public numberOfCoins coinsPrice;
 
-    public Text priceText;
+    public Text numberOfCoinsText;
 
     public CoinsManager coinsManager;
 
 
     private void Start()
     {
-        int value = (int)nb;
-        priceText.text = value.ToString();
+        int value = (int)coinsPrice;
+        numberOfCoinsText.text = value.ToString();
 
         coinsManager = GetComponent<CoinsManager>();    
     }
 
     public void BuyPreniumCoins()
     {
-        coinsManager.AddCoins((int)nb);
+        coinsManager.AddCoins((int)coinsPrice);
         coinsManager.UpdateCoins();
     }
 

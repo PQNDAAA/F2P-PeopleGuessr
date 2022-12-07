@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class FreeniumText : MonoBehaviour
 {
    Text text;
-    public UtilitiesMainMenu utils;
+    public UserProfile userProfile;
     void Start()
     {
         text = GetComponent<Text>();
     }
     void Update()
     {
-        text.text = utils.bank.coinsFreenium.ToString();
+        text.text = userProfile.coinsFreenium.ToString();
     }
 }

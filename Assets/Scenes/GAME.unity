@@ -378,6 +378,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f986f91425088054d95f5d3d716a68fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &147138284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 147138286}
+  - component: {fileID: 147138285}
+  m_Layer: 0
+  m_Name: UserProfile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &147138285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147138284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da357585b54308549afab19928b403a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsPrenium: 0
+  coinsFreenium: 0
+--- !u!4 &147138286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147138284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1648.8713, y: 883.8635, z: -1040.727}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &313169344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,8 +1408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59c289d7715eef48bb05d9e7dc0cffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsPrenium: 0
-  coinsFreenium: 0
+  userProfile: {fileID: 147138285}
 --- !u!1 &968965796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,7 +1906,7 @@ MonoBehaviour:
   gs: {fileID: 1087917074}
   peopleslist: {fileID: 1775273897}
   nbExecutionsPanel: 0
-  maxExecutionsPanel: 1
+  maxExecutionsPanel: 0
 --- !u!1 &1180290115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3124,7 +3168,7 @@ GameObject:
   - component: {fileID: 1894248090}
   - component: {fileID: 1894248089}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: QuestionsList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

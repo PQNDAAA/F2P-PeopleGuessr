@@ -7,13 +7,13 @@ using UnityEngine.UI;
 public class PreniumText : MonoBehaviour
 {
     Text text;
-    public UtilitiesMainMenu utils;
+    public UserProfile userProfile;
     void Start()
     {
         text = GetComponent<Text>();
     }
     void Update()
     {
-        text.text = utils.bank.coinsPrenium.ToString();
+        text.text = userProfile.coinsPrenium.ToString();
     }
 }
