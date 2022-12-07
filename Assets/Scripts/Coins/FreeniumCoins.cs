@@ -6,29 +6,29 @@ public class FreeniumCoins : CoinsManager
 {
     public override int AddCoins(int value)
     {
-        return coinsFreenium+= value;
+        return utils.bank.coinsFreenium += value;
     }
 
     public override string DisplayCoins()
     {
-        return coinsFreenium.ToString();
+        return utils.bank.coinsFreenium.ToString();
     }
 
     public override int RemoveCoins(int value)
     {
-        return coinsFreenium-= value;
+        return utils.bank.coinsFreenium -= value;
     }
 
     public override void Start()
     {
-        coinsFreenium = PlayerPrefs.GetInt("CoinsFreenium");
+        utils.bank.coinsFreenium = PlayerPrefs.GetInt("CoinsFreenium");
     }
 
     public override void UpdateCoins()
     {
-       PlayerPrefs.SetInt("CoinsFreenium", coinsFreenium);
-       coinsFreenium = PlayerPrefs.GetInt("CoinsFreenium");
+       PlayerPrefs.SetInt("CoinsFreenium", utils.bank.coinsFreenium);
+        utils.bank.coinsFreenium = PlayerPrefs.GetInt("CoinsFreenium");
        PlayerPrefs.Save();
-       Debug.Log(coinsFreenium);
+       Debug.Log(utils.bank.coinsFreenium);
     }
 }

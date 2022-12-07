@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class UtilitiesMainMenu : MonoBehaviour
 {
-    public CoinsManager coinsManager;
+    public GameObject shopCoinsPanel;
+    public Bank bank;
 }

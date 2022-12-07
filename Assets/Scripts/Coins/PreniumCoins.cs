@@ -6,29 +6,29 @@ public class PreniumCoins : CoinsManager
 {
     public override int AddCoins(int value)
     {
-        return coinsPrenium += value;
+        return utils.bank.coinsPrenium += value;
     }
 
     public override string DisplayCoins()
     {
-        return coinsPrenium.ToString();
+        return utils.bank.coinsPrenium.ToString();
     }
 
     public override int RemoveCoins(int value)
     {
-        return coinsPrenium -= value;
+        return utils.bank.coinsPrenium -= value;
     }
 
     public override void Start()
     {
-        coinsPrenium = PlayerPrefs.GetInt("CoinsPrenium");
+        utils.bank.coinsPrenium = PlayerPrefs.GetInt("CoinsPrenium");
     }
 
     public override void UpdateCoins()
     {
-        PlayerPrefs.SetInt("CoinsPrenium", coinsPrenium);
-        coinsPrenium = PlayerPrefs.GetInt("CoinsPrenium");
+        PlayerPrefs.SetInt("CoinsPrenium", utils.bank.coinsPrenium);
+        utils.bank.coinsPrenium = PlayerPrefs.GetInt("CoinsPrenium");
         PlayerPrefs.Save();
-        Debug.Log(coinsPrenium);
+        Debug.Log(utils.bank.coinsPrenium);
     }
 }
