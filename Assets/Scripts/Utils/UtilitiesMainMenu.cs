@@ -5,5 +5,5 @@ using UnityEngine;
 public class UtilitiesMainMenu : MonoBehaviour
 {
     public GameObject shopCoinsPanel;
-    public GameObject packsShop;
+    public GameObject clothesShop;
 }

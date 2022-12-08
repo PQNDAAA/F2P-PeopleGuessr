@@ -6,6 +6,6 @@ public class Shop : MonoBehaviour
 {
      void Start()
     {
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
     }
 }
