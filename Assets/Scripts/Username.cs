@@ -12,6 +12,9 @@ public class Username : MonoBehaviour
     void Start()
     {
         profile = GetComponent<UserProfile>();
+/*
+        PlayerPrefs.SetInt("HasPlayed", 0);
+        PlayerPrefs.SetString("Username", null);*/
 
         profile.hasPlayed = PlayerPrefs.GetInt("HasPlayed");
         profile.username = PlayerPrefs.GetString("Username");
@@ -28,6 +31,11 @@ public class Username : MonoBehaviour
 
         profile.UpdateUsername();
         profile.UpdateHasPlayed();
+
+        profile.coinsFreenium += 100;
+        PlayerPrefs.SetInt("CoinsFreenium", profile.coinsFreenium);
+        profile.coinsFreenium = PlayerPrefs.GetInt("CoinsFreenium");
+        PlayerPrefs.Save();
 
         usernamePanel.SetActive(false);  
     }
