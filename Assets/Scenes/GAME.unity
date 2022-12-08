@@ -1282,10 +1282,10 @@ RectTransform:
   m_Father: {fileID: 1087917071}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -801.67395, y: 376.66934}
-  m_SizeDelta: {x: 316.6523, y: 162.4879}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 158.32605, y: -66.33066}
+  m_SizeDelta: {x: 316.65234, y: 162.48792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834229132
 MonoBehaviour:
@@ -1906,7 +1906,7 @@ MonoBehaviour:
   gs: {fileID: 1087917074}
   peopleslist: {fileID: 1775273897}
   nbExecutionsPanel: 0
-  maxExecutionsPanel: 0
+  maxExecutionsPanel: 3
 --- !u!1 &1180290115
 GameObject:
   m_ObjectHideFlags: 0

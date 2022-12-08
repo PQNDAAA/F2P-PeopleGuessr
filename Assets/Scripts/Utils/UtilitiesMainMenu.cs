@@ -6,4 +6,5 @@ public class UtilitiesMainMenu : MonoBehaviour
 {
     public GameObject shopCoinsPanel;
     public GameObject clothesShop;
+    public GameObject loginPanel;
 }
