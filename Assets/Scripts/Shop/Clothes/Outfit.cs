@@ -17,5 +17,11 @@ public class Outfit : ClothesShop
     public override void ShowPanel()
     {
         panel.SetActive(true);
+        ShowPrice();
+    }
+
+    public override void ShowPrice()
+    {
+        priceTxt.text = price.ToString();
     }
 }
