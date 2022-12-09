@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Pack : ClothesShop
 {
-    public override void BuyClothesByPreniumCoins()
+    public override void Start()
     {
-        throw new System.NotImplementedException();
+        coinsManager = GetComponent<CoinsManager>();
     }
 
     public override void HidePanel()
@@ -23,5 +23,12 @@ public class Pack : ClothesShop
     public override void ShowPrice()
     {
         priceTxt.text = price.ToString();
+    }
+
+    public override void PurchaseClothes()
+    {
+        coinsManager.RemoveCoins(price);
+        coinsManager.UpdateCoins();
+        purchaseButton.gameObject.SetActive(false);
     }
 }
