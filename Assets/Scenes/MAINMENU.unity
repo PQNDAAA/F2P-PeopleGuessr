@@ -1510,6 +1510,7 @@ MonoBehaviour:
   panel: {fileID: 984103987}
   coinsManager: {fileID: 0}
   purchaseButton: {fileID: 69409253}
+  userProfile: {fileID: 649541121}
 --- !u!114 &188019485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2894,6 +2895,7 @@ MonoBehaviour:
   panel: {fileID: 488372964}
   coinsManager: {fileID: 0}
   purchaseButton: {fileID: 887887665}
+  userProfile: {fileID: 649541121}
 --- !u!114 &541353615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3693,6 +3695,7 @@ MonoBehaviour:
   panel: {fileID: 667608128}
   coinsManager: {fileID: 0}
   purchaseButton: {fileID: 1020588575}
+  userProfile: {fileID: 649541121}
 --- !u!114 &758900965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3858,6 +3861,7 @@ MonoBehaviour:
   panel: {fileID: 1816965957}
   coinsManager: {fileID: 0}
   purchaseButton: {fileID: 857221701}
+  userProfile: {fileID: 649541121}
 --- !u!114 &770934483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7850,6 +7854,7 @@ MonoBehaviour:
   panel: {fileID: 1955300006}
   coinsManager: {fileID: 0}
   purchaseButton: {fileID: 1963601951}
+  userProfile: {fileID: 649541121}
 --- !u!114 &1425402587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10062,6 +10067,7 @@ MonoBehaviour:
   panel: {fileID: 2118295239}
   coinsManager: {fileID: 0}
   purchaseButton: {fileID: 1633908070}
+  userProfile: {fileID: 649541121}
 --- !u!114 &1897807249
 MonoBehaviour:
   m_ObjectHideFlags: 0

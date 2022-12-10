@@ -6,9 +6,12 @@ public class Lootbox : ClothesShop
 {
     public override void PurchaseClothes()
     {
-        coinsManager.RemoveCoins(price);
-        coinsManager.UpdateCoins();
-        purchaseButton.gameObject.SetActive(false);
+        if (userProfile.coinsPrenium >= price)
+        {
+            coinsManager.RemoveCoins(price);
+            coinsManager.UpdateCoins();
+            purchaseButton.gameObject.SetActive(false);
+        }
     }
     public override void Start()
     {

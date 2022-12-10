@@ -10,6 +10,7 @@ public abstract class ClothesShop : MonoBehaviour
     public GameObject panel;
     public CoinsManager coinsManager;
     public Button purchaseButton;
+    public UserProfile userProfile;
 
     abstract public void Start();
 
