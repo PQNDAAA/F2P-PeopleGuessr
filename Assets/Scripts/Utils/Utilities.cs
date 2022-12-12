@@ -10,6 +10,10 @@ public class Utilities : MonoBehaviour
     public QuestionsMenu qm;
     public Timer timer;
 
+    public AudioSource audioSourceWin;
+    public AudioSource audioSourceLoose;
+    public AudioSource audioSourceCoins;
+
     public Text popupCoinsText;
     public int numberAddCoins = 100;
 
@@ -23,9 +27,9 @@ public class Utilities : MonoBehaviour
 
         popupCoinsText.gameObject.SetActive(false);
     }
-    public int AddExecutions()
+    public int AddExecutions(int value)
     {
-        return qm.nbExecutionsPanel += 1;
+        return qm.nbExecutionsPanel += value;
     }
     public void PopupCoins(int value,int time)
     {
@@ -33,10 +37,11 @@ public class Utilities : MonoBehaviour
         popupCoinsText.text = "+"+ value +" Coins";
         StartCoroutine(CountdownPopupCoins(time));
     }
-    public void AddCoins(int value)
+    public void AddCoins(int value,float audiodelay)
     {
         coinsManager.AddCoins(value);
         coinsManager.UpdateCoins();
+        audioSourceCoins.PlayDelayed(audiodelay);  
     }
 
 }

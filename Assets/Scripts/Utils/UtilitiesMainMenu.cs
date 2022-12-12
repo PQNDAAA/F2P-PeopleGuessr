@@ -7,7 +7,8 @@ public class UtilitiesMainMenu : MonoBehaviour
 {
     public GameObject shopCoinsPanel;
     public GameObject clothesShop;
-    public GameObject loginPanel;
+    public GameObject settingsPanel;
+    public GameObject dressingPanel;
 
     public void AccessToPreniumShop()
     {
@@ -16,5 +17,13 @@ public class UtilitiesMainMenu : MonoBehaviour
     public void AccessToShop()
     {
         clothesShop.SetActive(true);
+    }
+    public void AccessToSettings()
+    {
+        settingsPanel.SetActive(true);
+    }
+    public void AccessToDressing()
+    {
+        dressingPanel.SetActive(true);
     }
 }

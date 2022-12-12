@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public QuestionsList questionslist;
 
     [Header("UI")]
-    public GameObject winUI;
     public GameObject questionsUI;
     public GameObject finalUI;
     public Utilities utils;
@@ -33,7 +32,6 @@ public class GameManager : MonoBehaviour
         mydelegate.Invoke();
 
         //UI
-        winUI.SetActive(false);
         finalUI.SetActive(false);
         questionsUI.SetActive(false);
 
@@ -64,7 +62,7 @@ public class GameManager : MonoBehaviour
 
         if (utils.finalmenu.isWin)
         {
-            utils.AddCoins(100);
+            utils.AddCoins(100,1f);
             utils.PopupCoins(100,3); 
             utils.finalmenu.isWin = false;
         }
@@ -74,7 +72,7 @@ public class GameManager : MonoBehaviour
         questionsUI.SetActive(true);
         utils.timer.questionsTime = true;
         utils.qm.RandomQuestion();
-        utils.AddExecutions();
+        utils.AddExecutions(1);
     }
     private void FinalTime()
     {

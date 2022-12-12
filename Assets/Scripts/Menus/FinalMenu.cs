@@ -43,11 +43,13 @@ public class FinalMenu : MonoBehaviour
             {
                 answer.text = "Congratulations!!";
                 isWin = true;
+                utils.audioSourceWin.Play();
             } 
             else
             {
                 answer.text = "You're wrong, it was " + nameSuspect.Value;
                 isWin = false;
+                utils.audioSourceLoose.Play();
             }
         }
     }
