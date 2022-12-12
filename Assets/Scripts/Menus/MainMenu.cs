@@ -11,12 +11,4 @@ public class MainMenu : MonoBehaviour
     {
         Application.LoadLevel("MAINMENU");
     }
-    public void AccessToPreniumShop()
-    {
-        utils.shopCoinsPanel.SetActive(true);
-    }
-    public void AccessToShop()
-    {
-        utils.clothesShop.SetActive(true);
-    }
 }
