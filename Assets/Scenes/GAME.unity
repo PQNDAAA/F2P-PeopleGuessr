@@ -1431,6 +1431,7 @@ MonoBehaviour:
   finalmenu: {fileID: 1264262239}
   qm: {fileID: 1118107168}
   timer: {fileID: 834229132}
+  generateSuspects: {fileID: 0}
   audioSourceWin: {fileID: 854782248}
   audioSourceLoose: {fileID: 854782247}
   audioSourceCoins: {fileID: 854782246}
@@ -1474,7 +1475,7 @@ AudioSource:
   m_GameObject: {fileID: 854782242}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8555098247801247208, guid: f346eb694eb83324cb9c9538cc271552, type: 2}
   m_audioClip: {fileID: 8300000, guid: e7225331f8da4f44b8e35f9c4b4257a7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
@@ -1570,7 +1571,7 @@ AudioSource:
   m_GameObject: {fileID: 854782242}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8555098247801247208, guid: f346eb694eb83324cb9c9538cc271552, type: 2}
   m_audioClip: {fileID: 8300000, guid: 7dcf066b531d32d4e88b270f389439e1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
@@ -1666,7 +1667,7 @@ AudioSource:
   m_GameObject: {fileID: 854782242}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8555098247801247208, guid: f346eb694eb83324cb9c9538cc271552, type: 2}
   m_audioClip: {fileID: 8300000, guid: 4fc01940a1be8114eab7c71e2954eedc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
@@ -1787,7 +1788,6 @@ MonoBehaviour:
   questionsUI: {fileID: 1118107164}
   finalUI: {fileID: 1264262235}
   utils: {fileID: 854782243}
-  generateSuspects: {fileID: 1087917074}
 --- !u!4 &991628754
 Transform:
   m_ObjectHideFlags: 0
@@ -2164,9 +2164,7 @@ MonoBehaviour:
   questions: {fileID: 1262674077}
   answer: {fileID: 1771326892}
   go: {fileID: 1118107164}
-  qL: {fileID: 1894248089}
-  gs: {fileID: 1087917074}
-  peopleslist: {fileID: 1775273897}
+  utils: {fileID: 0}
   nbExecutionsPanel: 0
   maxExecutionsPanel: 3
 --- !u!1 &1180290115
@@ -2530,7 +2528,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   field: {fileID: 1234923393}
-  gs: {fileID: 1087917074}
   go: {fileID: 1264262235}
   utils: {fileID: 854782243}
   answer: {fileID: 1759876475}
