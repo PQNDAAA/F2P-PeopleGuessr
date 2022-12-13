@@ -81,19 +81,19 @@ public class QuestionsMenu : MonoBehaviour
 
     public void checkAnswer()
     {
-                                        if (noBox.isOn)
-                                        {
-                                            noBox.isOn = false;
+        if (noBox.isOn)
+        {
+            noBox.isOn = false;
 
             MessageAnswer("No you're wrong", "Your answer is OK");
 
-                                        } else if (yesBox.isOn)
-                                        {
-                                            yesBox.isOn = false;
+        } else if (yesBox.isOn)
+        {
+            yesBox.isOn = false;
 
             MessageAnswer("Your answer is OK", "No you're wrong");
         }
-                                    }
+    }
 
     //This function makes Messages and Check the answer with suspect characteristics 
     public void MessageAnswer(string yesString, string NoString)

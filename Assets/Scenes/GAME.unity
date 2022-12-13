@@ -1431,7 +1431,7 @@ MonoBehaviour:
   finalmenu: {fileID: 1264262239}
   qm: {fileID: 1118107168}
   timer: {fileID: 834229132}
-  generateSuspects: {fileID: 0}
+  generateSuspects: {fileID: 1087917074}
   audioSourceWin: {fileID: 854782248}
   audioSourceLoose: {fileID: 854782247}
   audioSourceCoins: {fileID: 854782246}
@@ -2164,7 +2164,7 @@ MonoBehaviour:
   questions: {fileID: 1262674077}
   answer: {fileID: 1771326892}
   go: {fileID: 1118107164}
-  utils: {fileID: 0}
+  utils: {fileID: 854782243}
   nbExecutionsPanel: 0
   maxExecutionsPanel: 3
 --- !u!1 &1180290115
