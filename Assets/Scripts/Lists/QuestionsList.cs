@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class QuestionsList : MonoBehaviour {
 
-    public IQuestionsList questionsList = new IQuestionsList();
+    //Create a global list for all questions
+    public IQuestionsList globalQuestionsList = new IQuestionsList();
 
     [System.Serializable]
+
+    //Create a specific list with each question 
     public class IQuestionsList : IEnumerable<QuestionsStructure>
     {
-        public List<QuestionsStructure> questions;
+        public List<QuestionsStructure> questionsList;
         public IEnumerator<QuestionsStructure> GetEnumerator()
         {
-            return questions.GetEnumerator();
+            return questionsList.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return questions.GetEnumerator();
+            return questionsList.GetEnumerator();
         }
     }
 }

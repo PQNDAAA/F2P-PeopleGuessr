@@ -9,7 +9,6 @@ public class FinalMenu : MonoBehaviour
     public InputField field;
 
     [Header("GameObject")]
-    public GenerateSuspects gs;
     public GameObject go;
     public Utilities utils;
 
@@ -37,8 +36,9 @@ public class FinalMenu : MonoBehaviour
 
     public void checkAnswer()
     {
-        foreach(var nameSuspect in gs.trueSuspectNameIndex)
+        foreach(var nameSuspect in utils.generateSuspects.trueSuspectNameIndex)
         {
+            //Compare if the player typed the correct name
             if(field.text == nameSuspect.Value)
             {
                 answer.text = "Congratulations!!";

@@ -2131,7 +2131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 125
   priceTxt: {fileID: 498004928}
-  panel: {fileID: 262779799}
+  purchasePanel: {fileID: 0}
   coinsManager: {fileID: 0}
   purchaseButton: {fileID: 221323853}
   userProfile: {fileID: 649541121}
@@ -5306,7 +5306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 400
   priceTxt: {fileID: 1344507127}
-  panel: {fileID: 488372964}
+  purchasePanel: {fileID: 0}
   coinsManager: {fileID: 0}
   purchaseButton: {fileID: 887887665}
   userProfile: {fileID: 649541121}
@@ -6198,7 +6198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 75
   priceTxt: {fileID: 445034953}
-  panel: {fileID: 2037523741}
+  purchasePanel: {fileID: 0}
   coinsManager: {fileID: 0}
   purchaseButton: {fileID: 393766949}
   userProfile: {fileID: 649541121}
@@ -6511,7 +6511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 80
   priceTxt: {fileID: 318790661}
-  panel: {fileID: 1648653984}
+  purchasePanel: {fileID: 0}
   coinsManager: {fileID: 0}
   purchaseButton: {fileID: 2018229132}
   userProfile: {fileID: 649541121}
@@ -11719,7 +11719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 250
   priceTxt: {fileID: 885032502}
-  panel: {fileID: 584204680}
+  purchasePanel: {fileID: 0}
   coinsManager: {fileID: 0}
   purchaseButton: {fileID: 432027711}
   userProfile: {fileID: 649541121}
@@ -15404,7 +15404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 100
   priceTxt: {fileID: 45820297}
-  panel: {fileID: 1014220472}
+  purchasePanel: {fileID: 0}
   coinsManager: {fileID: 0}
   purchaseButton: {fileID: 331020016}
   userProfile: {fileID: 649541121}

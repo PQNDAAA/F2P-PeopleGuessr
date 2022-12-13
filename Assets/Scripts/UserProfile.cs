@@ -10,6 +10,7 @@ public class UserProfile : MonoBehaviour
 /*    public const string CoinsPrenium = "CoinsPrenium";
     public const string CoinsFreenium = "CoinsFreenium";*/
 
+    //Define the player caracteristics like name, number of coins ...
     public string username;
     public int hasPlayed = 0;
 
@@ -22,6 +23,7 @@ public class UserProfile : MonoBehaviour
         coinsPrenium = PlayerPrefs.GetInt("CoinsPrenium"); 
     }
 
+    //Functions to udpdate the various caracteristics of player
     public void UpdateHasPlayed()
     {
         hasPlayed += 1;

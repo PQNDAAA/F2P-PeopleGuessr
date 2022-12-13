@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PreniumText : MonoBehaviour
 {
+    //Define the prenium text with the target currency
     Text text;
     public UserProfile userProfile;
     void Start()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PreniumCoins : CoinsManager
 {
+    //Define the prenium coins 
     public override int AddCoins(int value)
     {
         return userProfile.coinsPrenium += value;

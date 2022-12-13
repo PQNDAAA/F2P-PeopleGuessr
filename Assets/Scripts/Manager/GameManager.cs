@@ -7,29 +7,24 @@ public class GameManager : MonoBehaviour
     public TextAsset jsonFile;
     public TextAsset questionsFile;
 
-    [Header("Lists")]
-    public PeoplesList peoplelist;
-    public QuestionsList questionslist;
-
     [Header("UI")]
     public GameObject questionsUI;
     public GameObject finalUI;
+
     public Utilities utils;
 
-    [Header("Generation")]
-    public GenerateSuspects generateSuspects;
-
     delegate void actiondelegate();
-    actiondelegate mydelegate;
+    actiondelegate gameStatusDelegate;
 
     void Start()
     {
         //JSON File
-        peoplelist.peoplel = JsonUtility.FromJson<PeoplesList.CreatePeopleList>(jsonFile.text);
-        questionslist.questionsList = JsonUtility.FromJson<QuestionsList.IQuestionsList>(questionsFile.text); 
+        utils.referencePeopleList.globalPeoplesList = JsonUtility.FromJson<PeoplesList.CreatePeopleList>(jsonFile.text);
+        utils.referenceQuestionslist.globalQuestionsList = JsonUtility.FromJson<QuestionsList.IQuestionsList>(questionsFile.text);
 
-        mydelegate = PlayTime;
-        mydelegate.Invoke();
+        //Declare my delegate 
+        gameStatusDelegate = PlayTime;
+        gameStatusDelegate.Invoke();
 
         //UI
         finalUI.SetActive(false);
@@ -39,17 +34,18 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+        //Check the time to show the questions panel
         if (utils.timer.TimerIsRunning == false && utils.timer.questionsTime == false)
         {
             if(utils.qm.nbExecutionsPanel != utils.qm.maxExecutionsPanel)
             {
-                mydelegate = QuestionsTime;
-                mydelegate.Invoke();
+                gameStatusDelegate = QuestionsTime;
+                gameStatusDelegate.Invoke();
             } 
             else
             {
-                mydelegate = FinalTime;
-                mydelegate.Invoke();
+                gameStatusDelegate = FinalTime;
+                gameStatusDelegate.Invoke();
             }
         }
 
@@ -60,13 +56,17 @@ public class GameManager : MonoBehaviour
             utils.timer.seconds = 10;
         }
 
+        //Check if the player won or not 
         if (utils.finalmenu.isWin)
         {
+            //This function in Utilities is with Add & Update of CoinsManager to simplify the class GameManager 
             utils.AddCoins(100,1f);
+
             utils.PopupCoins(100,3); 
-            utils.finalmenu.isWin = false;
+            utils.finalmenu.isWin = false; //Do once
         }
     }
+    //The game has different time like on the bottom (Question,Final...)
     private void QuestionsTime()
     {
         questionsUI.SetActive(true);
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
     }
     private void PlayTime()
     {
-        generateSuspects.Generate();
-        generateSuspects.TrueSuspect();
+        utils.generateSuspects.Generate();
+        utils.generateSuspects.TrueSuspect();
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Outfit : ClothesShop
 {
+    //Function to purchase clothes and check if the player can buy it 
     public override void PurchaseClothes()
     {
         if (userProfile.coinsPrenium >= price)
@@ -15,12 +16,12 @@ public class Outfit : ClothesShop
     }
     public override void HidePanel()
     {
-        panel.SetActive(false);
+        purchasePanel.SetActive(false);
     }
 
     public override void ShowPanel()
     {
-        panel.SetActive(true);
+        purchasePanel.SetActive(true);
         ShowPrice();
     }
 

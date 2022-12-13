@@ -1434,6 +1434,8 @@ MonoBehaviour:
   audioSourceWin: {fileID: 854782248}
   audioSourceLoose: {fileID: 854782247}
   audioSourceCoins: {fileID: 854782246}
+  referencePeopleList: {fileID: 1775273897}
+  referenceQuestionslist: {fileID: 1894248089}
   popupCoinsText: {fileID: 1911464664}
   numberAddCoins: 100
 --- !u!4 &854782244
@@ -1782,8 +1784,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jsonFile: {fileID: 4900000, guid: aaa0d4e78fbbb7741b64c9fd7e9e2ded, type: 3}
   questionsFile: {fileID: 4900000, guid: da136c23aa2e3b641bc7a1db4b5185c1, type: 3}
-  peoplelist: {fileID: 1775273897}
-  questionslist: {fileID: 1894248089}
   questionsUI: {fileID: 1118107164}
   finalUI: {fileID: 1264262235}
   utils: {fileID: 854782243}
@@ -1984,7 +1984,7 @@ MonoBehaviour:
   - {fileID: 75600693}
   - {fileID: 1776995018}
   - {fileID: 779953330}
-  peopleslist: {fileID: 1775273897}
+  utils: {fileID: 854782243}
   maxTries: 6
   tries: 0
 --- !u!1 &1100891358
@@ -2925,78 +2925,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd09525909a6df44782163aaad979ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  peoplel:
-    peoples:
-    - Index: 0
-      Name: 
-      Hair: 
-      Tatoos: 0
-      Tshirt: 
-      Glasses: 0
-      Backpack: 0
-    - Index: 0
-      Name: 
-      Hair: 
-      Tatoos: 0
-      Tshirt: 
-      Glasses: 0
-      Backpack: 0
-    - Index: 0
-      Name: 
-      Hair: 
-      Tatoos: 0
-      Tshirt: 
-      Glasses: 0
-      Backpack: 0
-    - Index: 0
-      Name: 
-      Hair: 
-      Tatoos: 0
-      Tshirt: 
-      Glasses: 0
-      Backpack: 0
-    - Index: 0
-      Name: 
-      Hair: 
-      Tatoos: 0
-      Tshirt: 
-      Glasses: 0
-      Backpack: 0
-    - Index: 0
-      Name: 
-      Hair: 
-      Tatoos: 0
-      Tshirt: 
-      Glasses: 0
-      Backpack: 0
-    - Index: 0
-      Name: 
-      Hair: 
-      Tatoos: 0
-      Tshirt: 
-      Glasses: 0
-      Backpack: 0
-    - Index: 0
-      Name: 
-      Hair: 
-      Tatoos: 0
-      Tshirt: 
-      Glasses: 0
-      Backpack: 0
-    - Index: 0
-      Name: 
-      Hair: 
-      Tatoos: 0
-      Tshirt: 
-      Glasses: 0
-      Backpack: 0
-    - Index: 0
-      Name: 
-      Hair: 
-      Tatoos: 0
-      Tshirt: 
-      Glasses: 0
-      Backpack: 0
+  globalPeoplesList:
+    peopleList: []
 --- !u!4 &1775273898
 Transform:
   m_ObjectHideFlags: 0
@@ -3237,16 +3167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fbedacf55bad2241baec7f87626903d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionsList:
-    questions:
-    - index: 0
-      question: 
-      answer: 0
-      color: 0
-    - index: 0
-      question: 
-      answer: 0
-      color: 0
+  globalQuestionsList:
+    questionsList: []
 --- !u!4 &1894248090
 Transform:
   m_ObjectHideFlags: 0

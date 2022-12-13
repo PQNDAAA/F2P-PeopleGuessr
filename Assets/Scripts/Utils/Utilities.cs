@@ -9,10 +9,14 @@ public class Utilities : MonoBehaviour
     public FinalMenu finalmenu;
     public QuestionsMenu qm;
     public Timer timer;
+    public GenerateSuspects generateSuspects;
 
     public AudioSource audioSourceWin;
     public AudioSource audioSourceLoose;
     public AudioSource audioSourceCoins;
+
+    public PeoplesList referencePeopleList;
+    public QuestionsList referenceQuestionslist;
 
     public Text popupCoinsText;
     public int numberAddCoins = 100;

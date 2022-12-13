@@ -10,6 +10,7 @@ public class UtilitiesMainMenu : MonoBehaviour
     public GameObject settingsPanel;
     public GameObject dressingPanel;
 
+    //Functions to access to various panels 
     public void AccessToPreniumShop()
     {
         shopCoinsPanel.SetActive(true);

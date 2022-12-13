@@ -11,12 +11,12 @@ public class Pack : ClothesShop
 
     public override void HidePanel()
     {
-        panel.SetActive(false);
+        purchasePanel.SetActive(false);
     }
 
     public override void ShowPanel()
     {
-        panel.SetActive(true);
+        purchasePanel.SetActive(true);
         ShowPrice();
     }
 

@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class PeoplesList : MonoBehaviour
 {
-    public CreatePeopleList peoplel = new CreatePeopleList();
+
+    //Create a global list for all peoples 
+    public CreatePeopleList globalPeoplesList = new CreatePeopleList();
 
     [System.Serializable]
 
+    //Create a specific list for each person with each caracteristics
     public class CreatePeopleList : IEnumerable<MainStructure>
     {
-        public List<MainStructure> peoples;
+        public List<MainStructure> peopleList;
 
         public IEnumerator<MainStructure> GetEnumerator()
         {
-            return peoples.GetEnumerator();
+            return peopleList.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return peoples.GetEnumerator();
+            return peopleList.GetEnumerator();
         }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FreeniumCoins : CoinsManager
 {
+    //Define the freenium coins 
     public override int AddCoins(int value)
     {
         return userProfile.coinsFreenium += value;

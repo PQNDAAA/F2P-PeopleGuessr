@@ -14,9 +14,7 @@ public class QuestionsMenu : MonoBehaviour
 
     [Header("GameObject")]
     public GameObject go;
-    public QuestionsList qL;
-    public GenerateSuspects gs;
-    public PeoplesList peopleslist;
+    public Utilities utils;
 
     [Header("Executions Number")]
     public int nbExecutionsPanel;
@@ -63,12 +61,14 @@ public class QuestionsMenu : MonoBehaviour
             yesBox.isOn = false;
         }
     }
+
+    //This function generates a random question from the json file 
     public int RandomQuestion()
     {
         System.Random random = new System.Random();
-        int index = random.Next(qL.questionsList.questions.Count);
+        int index = random.Next(utils.referenceQuestionslist.globalQuestionsList.questionsList.Count);
 
-        foreach (QuestionsStructure questionsList in qL.questionsList)
+        foreach (QuestionsStructure questionsList in utils.referenceQuestionslist.globalQuestionsList)
         {
             if(questionsList.index == index)
             {
@@ -95,27 +95,28 @@ public class QuestionsMenu : MonoBehaviour
         }
                                     }
 
+    //This function makes Messages and Check the answer with suspect characteristics 
     public void MessageAnswer(string yesString, string NoString)
     {
-        foreach (QuestionsStructure questionsList in qL.questionsList)//QUESTIONS
+        foreach (QuestionsStructure questionsList in utils.referenceQuestionslist.globalQuestionsList)//QUESTIONS
         {
             if (questionsList.index == indexQ)
             {
-                foreach (var suspectc in gs.suspectCharacteristics)//Suspect Chracteristics
+                foreach (var suspectParameters in utils.generateSuspects.suspectCharacteristics)//Suspect Chracteristics
                 {
-                    if (suspectc.Key == questionsList.answer.ToString())
+                    if (suspectParameters.Key == questionsList.answer.ToString())
                     {
-                        if (suspectc.Value == "False")
+                        if (suspectParameters.Value == "False")
                         {
                             answer.text = NoString;
                         }
-                        else if (suspectc.Value == "True")
+                        else if (suspectParameters.Value == "True")
                         {
                             answer.text = yesString;
                         }
                         else if (questionsList.color.ToString() != "Nothing")
                         {
-                            if (suspectc.Value != questionsList.color.ToString())
+                            if (suspectParameters.Value != questionsList.color.ToString())
                             {
                                 answer.text = NoString;
                             }

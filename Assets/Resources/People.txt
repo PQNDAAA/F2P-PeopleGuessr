@@ -1,5 +1,5 @@
 {
-    "peoples":[
+    "peopleList":[
         {
             "Index": "0",
             "Name": "Max",
