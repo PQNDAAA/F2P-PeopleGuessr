@@ -2168,7 +2168,7 @@ MonoBehaviour:
   gs: {fileID: 1087917074}
   peopleslist: {fileID: 1775273897}
   nbExecutionsPanel: 0
-  maxExecutionsPanel: 0
+  maxExecutionsPanel: 3
 --- !u!1 &1180290115
 GameObject:
   m_ObjectHideFlags: 0
